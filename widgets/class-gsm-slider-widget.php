@@ -632,6 +632,20 @@ class GSM_Slider_Widget extends Widget_Base {
 		);
 
 		$repeater->add_control(
+			'video_mobile_optim',
+			array(
+				'label'        => esc_html__( 'Disable Video on Mobile', 'gsm-slider' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'label_on'     => esc_html__( 'Yes', 'gsm-slider' ),
+				'label_off'    => esc_html__( 'No', 'gsm-slider' ),
+				'return_value' => 'yes',
+				'default'      => 'yes',
+				'description'  => esc_html__( 'Saves mobile data by replacing the video with the poster image on small screens (< 768px).', 'gsm-slider' ),
+				'condition'    => array( 'media_type' => 'video' ),
+			)
+		);
+
+		$repeater->add_control(
 			'cinematic_video_intro',
 			array(
 				'label'        => esc_html__( 'Cinematic Intro (Blur to Sharp)', 'gsm-slider' ),
@@ -1974,6 +1988,20 @@ class GSM_Slider_Widget extends Widget_Base {
 		);
 
 		$this->add_control(
+			'autoplay_viewport',
+			array(
+				'label'        => esc_html__( 'Pause When Off-Screen', 'gsm-slider' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'label_on'     => esc_html__( 'Yes', 'gsm-slider' ),
+				'label_off'    => esc_html__( 'No', 'gsm-slider' ),
+				'return_value' => 'yes',
+				'default'      => 'yes',
+				'description'  => esc_html__( 'Pause autoplay when the slider scrolls out of view and resume when it returns. Saves CPU and battery on long pages.', 'gsm-slider' ),
+				'condition'    => array( 'autoplay' => 'yes' ),
+			)
+		);
+
+		$this->add_control(
 			'speed',
 			array(
 				'label'   => esc_html__( 'Transition Speed (ms)', 'gsm-slider' ),
@@ -1983,6 +2011,7 @@ class GSM_Slider_Widget extends Widget_Base {
 				'step'    => 100,
 			)
 		);
+
 
 		$this->add_control(
 			'scroll_trigger',
@@ -2341,8 +2370,73 @@ class GSM_Slider_Widget extends Widget_Base {
 		$this->start_controls_section(
 			'section_mobile',
 			array(
-				'label' => esc_html__( 'Mobile Settings', 'gsm-slider' ),
+				'label' => esc_html__( 'Responsive Settings', 'gsm-slider' ),
 				'tab'   => Controls_Manager::TAB_CONTENT,
+			)
+		);
+
+		// ─── Tablet ────────────────────────────────────────────────────
+		$this->add_control(
+			'responsive_tablet_heading',
+			array(
+				'label' => esc_html__( '— Tablet (768px – 1024px)', 'gsm-slider' ),
+				'type'  => Controls_Manager::HEADING,
+			)
+		);
+
+		$this->add_responsive_control(
+			'slider_height_tablet',
+			array(
+				'label'          => esc_html__( 'Height on Tablet', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px', 'vh' ),
+				'range'          => array(
+					'px' => array( 'min' => 200, 'max' => 1000 ),
+					'vh' => array( 'min' => 20, 'max' => 100 ),
+				),
+				'default'        => array(
+					'size' => 520,
+					'unit' => 'px',
+				),
+				'tablet_default' => array(
+					'size' => 520,
+					'unit' => 'px',
+				),
+				'devices'        => array( 'tablet' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-slider' => 'height: {{SIZE}}{{UNIT}};',
+				),
+				'description'    => esc_html__( 'Overrides the main Slider Height on tablet screens.', 'gsm-slider' ),
+			)
+		);
+
+		$this->add_responsive_control(
+			'tablet_content_padding_scale',
+			array(
+				'label'      => esc_html__( 'Content Padding on Tablet', 'gsm-slider' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => array( 'px' ),
+				'range'      => array(
+					'px' => array( 'min' => 10, 'max' => 60 ),
+				),
+				'default'    => array(
+					'size' => 24,
+					'unit' => 'px',
+				),
+				'selectors'  => array(
+					'{{WRAPPER}} .gsm-slide-inner' => 'padding-left: {{SIZE}}{{UNIT}}; padding-right: {{SIZE}}{{UNIT}};',
+				),
+				'devices'    => array( 'tablet' ),
+			)
+		);
+
+		// ─── Mobile ────────────────────────────────────────────────────
+		$this->add_control(
+			'responsive_mobile_heading',
+			array(
+				'label'     => esc_html__( '— Mobile (< 768px)', 'gsm-slider' ),
+				'type'      => Controls_Manager::HEADING,
+				'separator' => 'before',
 			)
 		);
 
@@ -2366,7 +2460,7 @@ class GSM_Slider_Widget extends Widget_Base {
 				),
 				'devices'        => array( 'mobile' ),
 				'selectors'      => array(
-					'{{WRAPPER}} .gsm-slide' => 'height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .gsm-slider' => 'height: {{SIZE}}{{UNIT}};',
 				),
 			)
 		);
@@ -2386,20 +2480,20 @@ class GSM_Slider_Widget extends Widget_Base {
 		$this->add_responsive_control(
 			'mobile_content_font_scale',
 			array(
-				'label'     => esc_html__( 'Content Font Scale on Mobile', 'gsm-slider' ),
-				'type'      => Controls_Manager::SLIDER,
+				'label'      => esc_html__( 'Content Font Scale on Mobile', 'gsm-slider' ),
+				'type'       => Controls_Manager::SLIDER,
 				'size_units' => array( '%' ),
-				'range'     => array(
+				'range'      => array(
 					'%' => array( 'min' => 50, 'max' => 100 ),
 				),
-				'default'   => array(
+				'default'    => array(
 					'size' => 75,
 					'unit' => '%',
 				),
-				'selectors' => array(
+				'selectors'  => array(
 					'{{WRAPPER}} .gsm-slide-content' => 'font-size: {{SIZE}}{{UNIT}};',
 				),
-				'devices'   => array( 'mobile' ),
+				'devices'    => array( 'mobile' ),
 			)
 		);
 
@@ -3948,9 +4042,11 @@ class GSM_Slider_Widget extends Widget_Base {
 							$poster_url_slide   = isset( $slide['video_poster']['url'] ) ? esc_url( $slide['video_poster']['url'] ) : '';
 							$preload_attr       = ( 0 === (int) $index ) ? 'auto' : 'metadata';
 							$video_title        = ! empty( $slide['heading'] ) ? $slide['heading'] : __( 'Video', 'gsm-slider' );
+							$mobile_optim       = isset( $slide['video_mobile_optim'] ) ? $slide['video_mobile_optim'] : 'yes';
+							$src_attr           = ( 'yes' === $mobile_optim ) ? 'data-src' : 'src';
 							?>
 							<?php if ( 'self' === $video_source_slide && ! empty( $slide['video_url'] ) ) : ?>
-								<div class="gsm-video-wrap gsm-video-self">
+								<div class="gsm-video-wrap gsm-video-self" data-mobile-opt="<?php echo esc_attr( $mobile_optim ); ?>">
 									<video
 										class="gsm-video"
 										autoplay
@@ -3963,7 +4059,7 @@ class GSM_Slider_Widget extends Widget_Base {
 										poster="<?php echo esc_url( $poster_url_slide ); ?>"
 										<?php endif; ?>
 									>
-										<source src="<?php echo esc_url( $slide['video_url'] ); ?>" type="video/mp4" />
+										<source <?php echo esc_attr( $src_attr ); ?>="<?php echo esc_url( $slide['video_url'] ); ?>" type="video/mp4" />
 									</video>
 									<button class="gsm-video-toggle" type="button" aria-label="<?php esc_attr_e( 'Pause video', 'gsm-slider' ); ?>">
 										<span class="gsm-video-toggle-icon" aria-hidden="true">&#9646;&#9646;</span>
@@ -3977,9 +4073,9 @@ class GSM_Slider_Widget extends Widget_Base {
 								$embed_src = $this->get_embed_url( $slide['video_embed_url'] );
 								?>
 								<?php if ( $embed_src ) : ?>
-								<div class="gsm-video-wrap gsm-video-embed">
+								<div class="gsm-video-wrap gsm-video-embed" data-mobile-opt="<?php echo esc_attr( $mobile_optim ); ?>">
 									<iframe
-										src="<?php echo esc_url( $embed_src ); ?>"
+										<?php echo esc_attr( $src_attr ); ?>="<?php echo esc_url( $embed_src ); ?>"
 										allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
 										allowfullscreen
 										loading="lazy"

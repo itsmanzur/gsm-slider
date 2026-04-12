@@ -37,6 +37,7 @@
 	position: relative;
 	width: 100%;
 	height: 520px;
+	min-height: 200px;
 	overflow: hidden;
 	background-color: #0f0f0f;
 }
@@ -1011,6 +1012,21 @@ body.gsm-lightbox-open {
 	.gsm-lightbox-play-icon {
 		font-size: 22px;
 	}
+
+	/* Mobile address-bar CLS prevention: use dynamic viewport height when supported */
+	/* Elementor inline styles use vh; we layer dvh on top via @supports */
+}
+
+/* dvh (dynamic-viewport-height): shrinks when address bar shown — prevents reflow */
+@supports (height: 100dvh) {
+	@media (max-width: 768px) {
+		.gsm-slider[class] {
+			/* Override Elementor's 100vh with 100dvh only when dvh is available.
+			   The !important is intentional — Elementor inline styles have specificity;
+			   slider_height_mobile control already provides px/vh overrides per-template. */
+			min-height: min(var(--gsm-mobile-height, 420px), 100dvh);
+		}
+	}
 }
 
 /* Swipe hint animation on first load */
@@ -1210,11 +1226,36 @@ body.gsm-lightbox-open {
 
 .gsm-tpl-filters {
 	display: flex;
-	gap: 8px;
+	gap: 16px;
 	padding: 14px 24px;
 	border-bottom: 1px solid #f0f0f0;
 	flex-shrink: 0;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.gsm-tpl-cats {
+	display: flex;
+	gap: 8px;
 	flex-wrap: wrap;
+}
+
+.gsm-tpl-search {
+	flex-shrink: 0;
+}
+
+#gsm-tpl-search-input {
+	padding: 6px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 13px;
+	width: 220px;
+	outline: none;
+	transition: border-color 0.2s;
+}
+
+#gsm-tpl-search-input:focus {
+	border-color: #0066cc;
 }
 
 .gsm-tpl-filter {
@@ -1380,6 +1421,69 @@ body.gsm-lightbox-open {
 .gsm-tpl-import:disabled {
 	opacity: 0.5;
 	cursor: not-allowed;
+}
+
+/* Dark Mode Support for Templates Modal */
+@media (prefers-color-scheme: dark) {
+	.gsm-tpl-dialog {
+		background: #1e1e1e;
+		box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8);
+	}
+	.gsm-tpl-header, .gsm-tpl-filters, .gsm-tpl-footer {
+		border-color: #333;
+	}
+	.gsm-tpl-title {
+		color: #f1f1f1;
+	}
+	.gsm-tpl-close {
+		color: #aaa;
+	}
+	.gsm-tpl-close:hover {
+		color: #fff;
+	}
+	.gsm-tpl-filter {
+		background: #2a2a2a;
+		border-color: #444;
+		color: #ccc;
+	}
+	.gsm-tpl-filter.on, .gsm-tpl-filter:hover {
+		background: #f1f1f1;
+		color: #111;
+		border-color: #f1f1f1;
+	}
+	#gsm-tpl-search-input {
+		background: #2a2a2a;
+		color: #f1f1f1;
+		border-color: #444;
+	}
+	#gsm-tpl-search-input:focus {
+		border-color: #0066cc;
+	}
+	.gsm-tpl-card {
+		border-color: #333;
+		background: #222;
+	}
+	.gsm-tpl-card:hover {
+		border-color: #666;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+	}
+	.gsm-tpl-card.selected {
+		border-color: #0066cc;
+	}
+	.gsm-tpl-card-body strong {
+		color: #f1f1f1;
+	}
+	.gsm-tpl-card-body span {
+		color: #aaa;
+	}
+	.gsm-tpl-cancel {
+		background: #2a2a2a;
+		border-color: #444;
+		color: #ccc;
+	}
+	.gsm-tpl-cancel:hover {
+		background: #333;
+	}
 }
 
 /* =========================================================
@@ -1731,15 +1835,33 @@ body.gsm-lightbox-open {
 	}
 
 	.gsm-split__image {
-		flex: 0 0 45% !important;
+		flex: 0 0 40% !important;
+		min-height: 180px;
 	}
 
 	.gsm-split__content {
-		flex: 0 0 55% !important;
+		flex: 1 1 auto !important;
+		min-height: 220px;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.gsm-split__content-inner {
-		padding: 20px 24px;
+		padding: 24px 20px;
+		max-width: 100%;
+	}
+
+	/* Heading font scale for split screen on mobile */
+	.gsm-split__content-inner h1,
+	.gsm-split__content-inner h2,
+	.gsm-split__content-inner h3 {
+		font-size: clamp(1.2rem, 4.5vw, 2rem);
+		margin: 8px 0;
+	}
+
+	.gsm-split__content-inner p {
+		font-size: clamp(0.85rem, 3vw, 1rem);
+		margin-bottom: 12px;
 	}
 }
 
@@ -2367,6 +2489,8 @@ body.gsm-lightbox-open {
 		align-items: stretch !important;
 		padding: 20px 16px !important;
 		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		scroll-behavior: smooth;
 	}
 
 	.gsm-book-content {
@@ -2382,6 +2506,16 @@ body.gsm-lightbox-open {
 	.gsm-book-grid {
 		max-width: 100%;
 		gap: 16px;
+	}
+
+	/* Disable 3D book card effects on low-power mobile devices */
+	@media (hover: none) {
+		.gsm-book-card:hover .gsm-book-inner {
+			transform: none;
+		}
+		.gsm-book-card:hover .gsm-book-shine {
+			opacity: 0;
+		}
 	}
 }
 

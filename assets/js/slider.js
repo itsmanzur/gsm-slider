@@ -1001,6 +1001,47 @@
 		}
 		var slider = sliderEl;
 
+		// --- Video Mobile Optimization ---
+		var isMobile = window.innerWidth <= 768; // Elementor standard mobile breakpoint
+		sliderEl.querySelectorAll( '.gsm-video-wrap[data-mobile-opt="yes"]' ).forEach( function ( wrap ) {
+			if ( isMobile ) {
+				// We are on mobile and optimization is ON.
+				// Remove the video source completely from the DOM to ensure we don't consume bandwidth,
+				// and fallback to the <video poster> image.
+				wrap.classList.add( 'gsm-video-mobile-disabled' );
+				var video = wrap.querySelector( 'video' );
+				if ( video ) {
+					var source = video.querySelector( 'source' );
+					if ( source ) {
+						source.parentNode.removeChild( source );
+					}
+					// Calling load() forces the browser to drop the video buffer
+					video.load();
+				}
+				var iframe = wrap.querySelector( 'iframe' );
+				if ( iframe ) {
+					iframe.parentNode.removeChild( iframe );
+				}
+				// Also hide the play/pause controls
+				var controls = wrap.querySelectorAll( '.gsm-video-toggle, .gsm-video-mute' );
+				controls.forEach( function( c ) { c.style.display = 'none'; } );
+			} else {
+				// Desktop: Swap data-src to src to start loading the video
+				var source = wrap.querySelector( 'source[data-src]' );
+				var videoNode = wrap.querySelector( 'video' );
+				if ( source && videoNode ) {
+					source.src = source.getAttribute('data-src');
+					source.removeAttribute( 'data-src' );
+					videoNode.load();
+				}
+				var iframeNode = wrap.querySelector( 'iframe[data-src]' );
+				if ( iframeNode ) {
+					iframeNode.src = iframeNode.getAttribute('data-src');
+					iframeNode.removeAttribute( 'data-src' );
+				}
+			}
+		});
+
 		// Parse settings.
 		var rawSettings = sliderEl.getAttribute( 'data-settings' );
 		var s = {};
@@ -1573,6 +1614,71 @@
 			swiper.on( 'autoplayTimeLeft', function ( swiperInstance, time, progress ) {
 				progressBar.style.width = Math.max( 0, Math.min( 100, ( 1 - progress ) * 100 ) ) + '%';
 			} );
+		}
+
+		// ---- INTERSECTION OBSERVER AUTOPLAY ----
+		// Start autoplay when slider enters viewport (≥40% visible).
+		// Pause when it leaves. This saves CPU/battery and avoids slides
+		// spinning away while completely off-screen.
+		// Respects the "Pause When Off-Screen" widget toggle (autoplay_viewport).
+		var viewportAutoplayEnabled =
+			s.autoplay &&
+			! prefersReducedMotion() &&
+			( 'IntersectionObserver' in window ) &&
+			// Default ON. Only disable when explicitly set to 'no' or false.
+			( s.autoplayViewport !== 'no' && s.autoplayViewport !== false &&
+			  s.autoplay_viewport !== 'no' && s.autoplay_viewport !== false );
+
+		if ( viewportAutoplayEnabled ) {
+			// Track whether the user has manually interacted (drag/click arrow).
+			// After interaction we still pause on hide but never forcibly restart
+			// if the user intentionally paused via hover — Swiper's own
+			// pauseOnMouseEnter handles that case.
+			var gsmAutoplayPausedByIO = false;
+
+			var autoplayObserver = new IntersectionObserver(
+				function ( entries ) {
+					entries.forEach( function ( entry ) {
+						if ( entry.isIntersecting ) {
+							// Slider is (back) in view — resume if we paused it.
+							if ( gsmAutoplayPausedByIO ) {
+								gsmAutoplayPausedByIO = false;
+								if ( swiper.autoplay && typeof swiper.autoplay.start === 'function' ) {
+									swiper.autoplay.start();
+								}
+							}
+						} else {
+							// Slider scrolled out of view — pause to save resources.
+							if (
+								swiper.autoplay &&
+								swiper.autoplay.running &&
+								typeof swiper.autoplay.stop === 'function'
+							) {
+								gsmAutoplayPausedByIO = true;
+								swiper.autoplay.stop();
+							}
+						}
+					} );
+				},
+				{
+					// Fire when ≥40% of the slider becomes visible / hidden.
+					// Lower threshold means "start earlier"; higher = wait until
+					// more of the slider is on screen.
+					threshold: 0.4,
+				}
+			);
+
+			autoplayObserver.observe( sliderEl );
+
+			// Also reset the progress-bar width to 0 when hidden so it doesn't
+			// show a stale value when scrolled back into view.
+			if ( progressBar ) {
+				swiper.on( 'autoplayStop', function () {
+					if ( gsmAutoplayPausedByIO && progressBar ) {
+						progressBar.style.width = '0%';
+					}
+				} );
+			}
 		}
 
 		// Run initial animation and handle effects on the first slide.
@@ -2597,12 +2703,17 @@
 			'    <button type="button" class="gsm-tpl-close" aria-label="Close">&times;</button>',
 			'  </div>',
 			'  <div class="gsm-tpl-filters">',
-			'    <button type="button" class="gsm-tpl-filter on" data-cat="all">All</button>',
-			'    <button type="button" class="gsm-tpl-filter" data-cat="hero">Hero</button>',
-			'    <button type="button" class="gsm-tpl-filter" data-cat="portfolio">Portfolio</button>',
-			'    <button type="button" class="gsm-tpl-filter" data-cat="testimonial">Testimonial</button>',
-			'    <button type="button" class="gsm-tpl-filter" data-cat="corporate">Corporate</button>',
-			'    <button type="button" class="gsm-tpl-filter" data-cat="dynamic">Dynamic</button>',
+			'    <div class="gsm-tpl-cats">',
+			'      <button type="button" class="gsm-tpl-filter on" data-cat="all">All</button>',
+			'      <button type="button" class="gsm-tpl-filter" data-cat="hero">Hero</button>',
+			'      <button type="button" class="gsm-tpl-filter" data-cat="portfolio">Portfolio</button>',
+			'      <button type="button" class="gsm-tpl-filter" data-cat="testimonial">Testimonial</button>',
+			'      <button type="button" class="gsm-tpl-filter" data-cat="corporate">Corporate</button>',
+			'      <button type="button" class="gsm-tpl-filter" data-cat="dynamic">Dynamic</button>',
+			'    </div>',
+			'    <div class="gsm-tpl-search">',
+			'      <input type="text" id="gsm-tpl-search-input" placeholder="Search templates..." aria-label="Search templates">',
+			'    </div>',
 			'  </div>',
 			'  <div class="gsm-tpl-grid"></div>',
 			'  <div class="gsm-tpl-footer">',
@@ -2634,9 +2745,16 @@
 					b.classList.remove( 'on' );
 				} );
 				this.classList.add( 'on' );
-				filterTemplates( this.dataset.cat );
+				filterTemplates();
 			} );
 		} );
+
+		var searchInput = modal.querySelector( '#gsm-tpl-search-input' );
+		if ( searchInput ) {
+			searchInput.addEventListener( 'input', function () {
+				filterTemplates();
+			} );
+		}
 
 		function selectTemplateCard( card ) {
 			if ( ! card || ! modal.contains( card ) ) {
@@ -2798,6 +2916,7 @@
 			card.className = 'gsm-tpl-card';
 			card.dataset.id = tpl.id;
 			card.dataset.cat = tpl.category || '';
+			card.dataset.title = (tpl.title || '').toLowerCase();
 			card.setAttribute( 'role', 'button' );
 			card.setAttribute( 'tabindex', '0' );
 
@@ -2805,9 +2924,11 @@
 			thumb.className = 'gsm-tpl-card__thumb';
 
 			var img = document.createElement( 'img' );
-			img.src = tpl.thumbnail || '';
+			img.dataset.src = tpl.thumbnail || '';
 			img.alt = tpl.title || '';
-			img.loading = 'lazy';
+			img.className = 'gsm-tpl-lazy';
+			img.style.opacity = '0'; // smooth reveal
+			img.style.transition = 'opacity 0.3s ease';
 
 			var prevBtn = document.createElement( 'button' );
 			prevBtn.type = 'button';
@@ -2833,14 +2954,57 @@
 			card.appendChild( body );
 			grid.appendChild( card );
 		} );
+
+		// Setup Intersection Observer for lazy loading
+		if ( 'IntersectionObserver' in window ) {
+			var thumbObserver = new IntersectionObserver( function ( entries, observer ) {
+				entries.forEach( function ( entry ) {
+					if ( entry.isIntersecting ) {
+						var lazyImage = entry.target;
+						lazyImage.src = lazyImage.dataset.src;
+						lazyImage.onload = function() {
+							lazyImage.style.opacity = '1';
+						};
+						observer.unobserve( lazyImage );
+					}
+				} );
+			}, {
+				root: grid,
+				rootMargin: '100px 0px',
+				threshold: 0
+			} );
+
+			grid.querySelectorAll( 'img.gsm-tpl-lazy' ).forEach( function ( img ) {
+				thumbObserver.observe( img );
+			} );
+		} else {
+			// Fallback if IO not supported
+			grid.querySelectorAll( 'img.gsm-tpl-lazy' ).forEach( function ( img ) {
+				img.src = img.dataset.src;
+				img.style.opacity = '1';
+			} );
+		}
 	}
 
 	function filterTemplates( cat ) {
 		if ( ! modal ) {
 			return;
 		}
+		
+		// If cat is not provided, identify the active category from the UI
+		if ( typeof cat !== 'string' ) {
+			var activeBtn = modal.querySelector( '.gsm-tpl-filter.on' );
+			cat = activeBtn ? ( activeBtn.dataset.cat || 'all' ) : 'all';
+		}
+		
+		// Get search keyword
+		var searchInput = modal.querySelector( '#gsm-tpl-search-input' );
+		var keyword = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
 		modal.querySelectorAll( '.gsm-tpl-card' ).forEach( function ( card ) {
-			card.style.display = ( cat === 'all' || card.dataset.cat === cat ) ? '' : 'none';
+			var matchCat = ( cat === 'all' || card.dataset.cat === cat );
+			var matchSearch = keyword === '' || ( card.dataset.title && card.dataset.title.indexOf( keyword ) !== -1 );
+			card.style.display = ( matchCat && matchSearch ) ? '' : 'none';
 		} );
 	}
 
