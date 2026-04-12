@@ -1,0 +1,2490 @@
+/**
+ * GSM Slider for Elementor — Frontend Stylesheet
+ *
+ * Custom properties, layout, animations, glassmorphism,
+ * parallax/cinematic effects, arrows, pagination, thumbnails,
+ * accessibility helpers, responsive overrides.
+ *
+ * @package GSM Slider
+ */
+
+/* =========================================================
+   0. Custom Properties
+   ========================================================= */
+.gsm-slider {
+	--gsm-arrow-color:      #ffffff;
+	--gsm-arrow-size:       20px;
+	--gsm-arrow-bg:         rgba(0, 0, 0, 0.35);
+	--gsm-arrow-bg-hover:   rgba(0, 0, 0, 0.6);
+	--gsm-arrow-radius:     50%;
+	--gsm-glass-blur:       10px;
+	--gsm-mobile-height:    420px;
+	--gsm-transition-speed: 0.4s;
+}
+
+/* =========================================================
+   1. Wrapper & Slider Base
+   ========================================================= */
+.gsm-slider-wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	/* Prevents theme/editor white showing through before BG images paint or during fade */
+	background-color: #0f0f0f;
+}
+
+.gsm-slider {
+	position: relative;
+	width: 100%;
+	height: 520px;
+	overflow: hidden;
+	background-color: #0f0f0f;
+}
+
+.gsm-slider .swiper-wrapper {
+	background-color: #0f0f0f;
+	/* Full-width Elementor layouts: parent must fill .gsm-slider height so .gsm-slide height:100% resolves */
+	height: 100% !important;
+	box-sizing: border-box;
+}
+
+/* =========================================================
+   2. Slides
+   ========================================================= */
+.gsm-slide {
+	position: relative;
+	/* Width is calculated automatically by Swiper for Carousel mode */
+	height: 100%;
+	min-height: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+/* Vertical alignment helpers */
+.gsm-valign-top    { align-items: flex-start; }
+.gsm-valign-middle { align-items: center; }
+.gsm-valign-bottom { align-items: flex-end; }
+
+/* =========================================================
+   3. Background Layer
+   ========================================================= */
+.gsm-bg {
+	position: absolute;
+	inset: 0;
+	background-color: #1a1a1a;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 0;
+	will-change: transform;
+	transition: transform var(--gsm-transition-speed) ease, filter 0.4s ease;
+}
+
+/* LQIP blur-up → full image */
+.gsm-lqip-loading {
+	filter: blur(8px);
+	transform: scale(1.05); /* hide blur edges */
+}
+
+.gsm-lqip-loaded {
+	filter: blur(0);
+	transform: scale(1);
+	transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Self-hosted & embed slide video */
+.gsm-video-wrap {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	background: #000;
+}
+
+.gsm-video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.gsm-video-embed {
+	background: #000;
+}
+
+.gsm-video-embed iframe {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100vw;
+	height: 56.25vw;
+	min-height: 100%;
+	min-width: 177.77vh;
+	transform: translate(-50%, -50%);
+	border: 0;
+	pointer-events: none;
+}
+
+.gsm-video-fallback-bg {
+	z-index: 0;
+}
+
+/* =========================================================
+   4. Overlay
+   ========================================================= */
+.gsm-slide-overlay {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	z-index: 1;
+	transition: opacity 0.4s ease;
+}
+
+/* =========================================================
+   5. Inner & Content
+   ========================================================= */
+.gsm-slide-inner {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	padding-left: max(20px, env(safe-area-inset-left));
+	padding-right: max(20px, env(safe-area-inset-right));
+	box-sizing: border-box;
+}
+
+/* Default inner alignment — left */
+.gsm-slide-inner {
+	justify-content: flex-start;
+}
+
+/* Widget-level alignment overrides via prefix_class */
+.gsm-content-align-left   .gsm-slide-inner { justify-content: flex-start; }
+.gsm-content-align-center .gsm-slide-inner { justify-content: center; }
+.gsm-content-align-right  .gsm-slide-inner { justify-content: flex-end; }
+
+/* Per-slide alignment overrides */
+.gsm-align-left   .gsm-slide-inner { justify-content: flex-start; }
+.gsm-align-center .gsm-slide-inner { justify-content: center; }
+.gsm-align-right  .gsm-slide-inner { justify-content: flex-end; }
+
+.gsm-slide-content {
+	position: relative;
+	max-width: 520px;
+	width: 100%;
+	padding: 32px 40px;
+	box-sizing: border-box;
+	transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+	            box-shadow 0.4s ease;
+}
+
+.gsm-slide-content h1,
+.gsm-slide-content h2,
+.gsm-slide-content h3,
+.gsm-slide-content h4,
+.gsm-slide-content h5,
+.gsm-slide-content h6,
+.gsm-slide-content .gsm-heading {
+	margin: 0 0 14px;
+	font-size: clamp(1.5rem, 3vw, 2.5rem);
+	line-height: 1.2;
+	color: #ffffff;
+}
+
+.gsm-slide-content p {
+	margin: 0 0 22px;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.gsm-no-box {
+	background-color: transparent !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+
+/* =========================================================
+   6. Button
+   ========================================================= */
+.gsm-btn {
+	display: inline-block;
+	padding: 12px 28px;
+	background-color: #ffffff;
+	color: #111111;
+	text-decoration: none;
+	font-weight: 600;
+	border-radius: 6px;
+	transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+	cursor: pointer;
+	border: none;
+	font-size: 0.95rem;
+	letter-spacing: 0.02em;
+}
+
+.gsm-btn:hover {
+	background-color: #f0f0f0;
+	transform: translateY(-2px);
+}
+
+.gsm-btn:focus-visible {
+	outline: 3px solid #4dabf7;
+	outline-offset: 3px;
+}
+
+.gsm-btn-wrap {
+	margin-top: 6px;
+}
+
+.gsm-btn-wrap.align-center {
+	text-align: center;
+}
+
+.gsm-btn-wrap.align-right {
+	text-align: right;
+}
+
+/* =========================================================
+   7. Glass Morphism
+   ========================================================= */
+.gsm-glass {
+	background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+@supports (backdrop-filter: blur(1px)) {
+	.gsm-glass {
+		backdrop-filter: blur(var(--gsm-glass-blur));
+		-webkit-backdrop-filter: blur(var(--gsm-glass-blur));
+	}
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+	/* Fallback: slightly more opaque */
+	.gsm-glass {
+		background-color: rgba(20, 20, 20, 0.55) !important;
+	}
+}
+
+/* =========================================================
+   8. Content Hover Lift Effect
+   ========================================================= */
+.gsm-content-hover {
+	transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+	            box-shadow 0.35s ease;
+}
+
+.gsm-content-hover:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   9. Image Effects — Zoom & Parallax
+   ========================================================= */
+
+/* Zoom */
+.gsm-effect-zoom {
+	transform: scale(1);
+	transition: transform 7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	will-change: transform;
+}
+
+.swiper-slide-active .gsm-effect-zoom {
+	transform: scale(1.1);
+}
+
+.swiper-slide-prev .gsm-effect-zoom,
+.swiper-slide-next .gsm-effect-zoom {
+	transform: scale(1);
+	transition: transform 1.2s ease;
+}
+
+/* Parallax */
+.gsm-effect-parallax .gsm-bg {
+	transform: translateX(0);
+}
+
+.gsm-effect-parallax.gsm-parallax-active .gsm-bg {
+	animation: gsm-parallax-bg 0.9s ease forwards;
+}
+
+@keyframes gsm-parallax-bg {
+	from { transform: translateX(-4%); }
+	to   { transform: translateX(0); }
+}
+
+/* =========================================================
+   10. Cinematic Slide Effect
+   ========================================================= */
+.gsm-cinematic .gsm-bg {
+	filter: brightness(0.7) saturate(0.8);
+	transform: scale(1.04);
+	transition: filter 1.2s ease, transform 1.2s ease;
+}
+
+.gsm-cinematic.gsm-cinematic-active .gsm-bg {
+	filter: brightness(1) saturate(1);
+	transform: scale(1);
+}
+
+/* =========================================================
+   11. Cinematic Video Intro — Blur to Sharp
+   ========================================================= */
+.gsm-video-cinematic-intro .gsm-video {
+	filter: blur(8px) scale(1.05);
+	transition: filter 1.4s ease, transform 1.4s ease;
+}
+
+.gsm-video-cinematic-intro.gsm-video-intro-active .gsm-video {
+	filter: blur(0) scale(1);
+	transform: translate(-50%, -50%) scale(1);
+}
+
+/* Slide badge (repeater) */
+.gsm-badge {
+	display: inline-block;
+	padding: 3px 12px;
+	border-radius: 20px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+/* =========================================================
+   12. Content Entry Animations
+   ========================================================= */
+.gsm-anim {
+	opacity: 0;
+	will-change: transform, opacity;
+	transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+	            transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gsm-anim.is-visible {
+	opacity: 1;
+	transform: none !important;
+}
+
+.gsm-anim.is-leaving {
+	opacity: 0;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animation types */
+.gsm-anim.fade-up    { transform: translateY(28px); }
+.gsm-anim.fade-down  { transform: translateY(-28px); }
+.gsm-anim.fade-left  { transform: translateX(28px); }
+.gsm-anim.fade-right { transform: translateX(-28px); }
+.gsm-anim.zoom-in    { transform: scale(0.88); }
+.gsm-anim.zoom-out   { transform: scale(1.12); }
+
+/* Flip animations */
+.gsm-anim.flip-x {
+	transform: perspective(400px) rotateX(90deg);
+	opacity: 0;
+}
+.gsm-anim.flip-y {
+	transform: perspective(400px) rotateY(90deg);
+	opacity: 0;
+}
+.gsm-anim.flip-x.is-visible,
+.gsm-anim.flip-y.is-visible {
+	transform: perspective(400px) rotate(0deg);
+	opacity: 1;
+}
+
+/* None animation */
+.gsm-anim.none {
+	opacity: 1 !important;
+	transform: none !important;
+	transition: none !important;
+}
+
+/* Leaving directions (reverse) */
+.gsm-anim.fade-up.is-leaving    { transform: translateY(-20px); }
+.gsm-anim.fade-left.is-leaving  { transform: translateX(-20px); }
+.gsm-anim.fade-right.is-leaving { transform: translateX(20px); }
+
+/* Exit animation base */
+.gsm-anim.is-exiting {
+	transition: opacity 0.35s ease, transform 0.35s ease !important;
+}
+
+/* Exit directions */
+.fade-out-up--exit    { transform: translateY(-20px) !important; opacity: 0 !important; }
+.fade-out-down--exit  { transform: translateY(20px) !important; opacity: 0 !important; }
+.fade-out-left--exit  { transform: translateX(-20px) !important; opacity: 0 !important; }
+.fade-out-right--exit { transform: translateX(20px) !important; opacity: 0 !important; }
+.zoom-out--exit       { transform: scale(0.88) !important; opacity: 0 !important; }
+
+/* =========================================================
+   13. Arrows — Base
+   ========================================================= */
+.gsm-btn-prev,
+.gsm-btn-next {
+	position: absolute;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: calc(var(--gsm-arrow-size) * 2.4);
+	height: calc(var(--gsm-arrow-size) * 2.4);
+	background-color: var(--gsm-arrow-bg);
+	color: var(--gsm-arrow-color);
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.25s ease, transform 0.2s ease;
+	padding: 0;
+}
+
+.gsm-btn-prev:hover,
+.gsm-btn-next:hover {
+	background-color: var(--gsm-arrow-bg-hover);
+	transform: scale(1.08);
+}
+
+.gsm-btn-prev:focus-visible,
+.gsm-btn-next:focus-visible {
+	outline: 3px solid #4dabf7;
+	outline-offset: 3px;
+}
+
+.gsm-btn-prev svg,
+.gsm-btn-next svg {
+	width:  var(--gsm-arrow-size);
+	height: var(--gsm-arrow-size);
+	stroke: var(--gsm-arrow-color);
+	display: block;
+}
+
+/* =========================================================
+   14. Arrow Positions
+   ========================================================= */
+
+/* Inside (default) */
+.gsm-arrow-inside .gsm-btn-prev,
+.gsm-arrow-inside .gsm-btn-next,
+.gsm-btn-prev,
+.gsm-btn-next {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.gsm-arrow-inside .gsm-btn-prev,
+.gsm-btn-prev {
+	left: 16px;
+}
+
+.gsm-arrow-inside .gsm-btn-next,
+.gsm-btn-next {
+	right: 16px;
+}
+
+/* Outside */
+.gsm-arrow-outside .gsm-btn-prev {
+	left: -56px;
+}
+
+.gsm-arrow-outside .gsm-btn-next {
+	right: -56px;
+}
+
+.gsm-arrow-outside .gsm-slider-wrapper {
+	overflow: visible;
+}
+
+/* Bottom */
+.gsm-arrow-bottom .gsm-btn-prev,
+.gsm-arrow-bottom .gsm-btn-next {
+	top: auto;
+	bottom: 16px;
+	transform: none;
+}
+
+.gsm-arrow-bottom .gsm-btn-prev {
+	left: 50%;
+	transform: translateX(calc(-100% - 8px));
+}
+
+.gsm-arrow-bottom .gsm-btn-next {
+	left: 50%;
+	transform: translateX(8px);
+}
+
+/* =========================================================
+   15. Pagination
+   ========================================================= */
+.gsm-pagination {
+	position: absolute;
+	bottom: 16px;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+}
+
+/* Bullets */
+.gsm-pagination .swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	opacity: 1;
+	transition: background-color 0.25s ease, transform 0.2s ease;
+	cursor: pointer;
+}
+
+.gsm-pagination .swiper-pagination-bullet-active {
+	background-color: #ffffff;
+	transform: scale(1.3);
+}
+
+/* Progress bar */
+.swiper-pagination-progressbar.gsm-pagination {
+	top: 0;
+	bottom: auto;
+	height: 4px;
+	border-radius: 0;
+	background: rgba(255, 255, 255, 0.25);
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background: #ffffff;
+	border-radius: 0;
+}
+
+/* Fraction */
+.swiper-pagination-fraction {
+	font-size: 0.85rem;
+	color: rgba(255, 255, 255, 0.85);
+	font-weight: 500;
+	letter-spacing: 0.05em;
+}
+
+/* =========================================================
+   16. Thumbnail Navigation Strip
+   ========================================================= */
+.gsm-thumbs-container {
+	display:         flex;
+	width:           100%;
+	justify-content: center;
+}
+
+.gsm-thumb-width-inline .gsm-thumbs-swiper {
+	width: max-content;
+	max-width: 100%;
+}
+
+.gsm-thumb-width-full .gsm-thumbs-swiper {
+	width: 100%;
+}
+
+.gsm-thumbs-swiper {
+	margin-top:   6px;
+	width:        100%;
+	box-sizing:   border-box;
+	background:   #111;
+}
+
+.gsm-thumb-slide {
+	width:            auto !important; /* Swiper slidesPerView: 'auto' */
+	height:           80px;            /* overridden per-widget via Elementor selector */
+	background-size:     cover;
+	background-position: center;
+	background-color:    #222;
+	border-radius:    4px;
+	cursor:           pointer;
+	opacity:          0.55;
+	border:           2px solid transparent;
+	transition:       opacity 0.25s ease, border-color 0.25s ease;
+	aspect-ratio:     16 / 9;
+	overflow:         hidden;
+	box-sizing:       border-box;
+}
+
+.gsm-thumb-slide.swiper-slide-thumb-active {
+	opacity:      1;
+	border-color: #ffffff; /* overridden per-widget via Elementor color picker */
+}
+
+.gsm-thumb-slide:hover {
+	opacity: 0.85;
+}
+
+.gsm-thumb-number {
+	display:         flex;
+	align-items:     center;
+	justify-content: center;
+	width:           100%;
+	height:          100%;
+	color:           #ffffff;
+	font-size:       0.85rem;
+	font-weight:     600;
+	background:      #333;
+}
+
+
+/* =========================================================
+   17. Video Toggle Button
+   ========================================================= */
+.gsm-video-toggle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.55);
+	color: #fff;
+	border: none;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	font-size: 13px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s ease;
+}
+
+.gsm-video-wrap.gsm-video-playing .gsm-video-toggle {
+	top: auto;
+	left: auto;
+	bottom: 16px;
+	right: 16px;
+	transform: none;
+}
+
+.gsm-video-mute {
+	position: absolute;
+	bottom: 16px;
+	left: 16px;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.55);
+	color: #fff;
+	border: none;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	font-size: 13px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s ease;
+}
+
+.gsm-video-mute:hover {
+	background: rgba(0, 0, 0, 0.85);
+}
+
+.gsm-video-mute:focus-visible {
+	outline: 3px solid #005fcc;
+	outline-offset: 2px;
+}
+
+.gsm-video-toggle:hover {
+	background: rgba(0, 0, 0, 0.85);
+}
+
+.gsm-video-toggle:focus-visible {
+	outline: 3px solid #005fcc;
+	outline-offset: 2px;
+}
+
+.gsm-autoplay-blocked::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.35);
+	z-index: 2;
+	pointer-events: none;
+}
+
+/* =========================================================
+   18. Video Lightbox
+   ========================================================= */
+.gsm-lightbox-trigger {
+	position: absolute;
+	inset: 0;
+	z-index: 6;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.gsm-lightbox-trigger:focus-visible {
+	outline: 3px solid #005fcc;
+	outline-offset: -4px;
+}
+
+.gsm-lightbox-btn {
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.92);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.25s ease, background 0.25s ease;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.gsm-lightbox-trigger:hover .gsm-lightbox-btn {
+	transform: scale(1.1);
+	background: #fff;
+}
+
+.gsm-lightbox-play-icon {
+	font-size: 28px;
+	color: #111;
+	margin-left: 5px;
+	line-height: 1;
+}
+
+.gsm-lightbox-btn--bottom-left {
+	position: absolute;
+	bottom: 24px;
+	left: 24px;
+	width: 52px;
+	height: 52px;
+}
+
+.gsm-lightbox-btn--bottom-right {
+	position: absolute;
+	bottom: 24px;
+	right: 24px;
+	width: 52px;
+	height: 52px;
+}
+
+.gsm-lightbox-btn--bottom-left .gsm-lightbox-play-icon,
+.gsm-lightbox-btn--bottom-right .gsm-lightbox-play-icon {
+	font-size: 20px;
+}
+
+.gsm-lightbox-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 999999;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.gsm-lightbox-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.92);
+	cursor: pointer;
+}
+
+.gsm-lightbox-inner {
+	position: relative;
+	z-index: 1;
+	width: 90vw;
+	max-width: 1100px;
+	aspect-ratio: 16 / 9;
+	background: #000;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+}
+
+.gsm-lightbox-close {
+	position: absolute;
+	top: -44px;
+	right: 0;
+	z-index: 10;
+	background: transparent;
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	color: #fff;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	font-size: 14px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s, border-color 0.2s;
+}
+
+.gsm-lightbox-close:hover {
+	background: rgba(255, 255, 255, 0.15);
+	border-color: #fff;
+}
+
+.gsm-lightbox-close:focus-visible {
+	outline: 3px solid #005fcc;
+}
+
+.gsm-lightbox-iframe,
+.gsm-lightbox-video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+body.gsm-lightbox-open {
+	overflow: hidden;
+}
+
+/* =========================================================
+   19. Accessibility — Visually Hidden
+   ========================================================= */
+.gsm-sr-only {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+
+/* Focus visible — WCAG 2.1 2.4.7 */
+.gsm-slider:focus-visible {
+	outline: 3px solid #005fcc;
+	outline-offset: 3px;
+}
+
+.gsm-slider .gsm-btn-prev:focus-visible,
+.gsm-slider .gsm-btn-next:focus-visible {
+	outline: 3px solid #005fcc;
+	outline-offset: 2px;
+}
+
+.gsm-pagination .swiper-pagination-bullet:focus-visible {
+	outline: 3px solid #005fcc;
+	outline-offset: 2px;
+}
+
+/* =========================================================
+   20. Prefers-Reduced-Motion
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+	.gsm-anim,
+	.gsm-anim.is-visible,
+	.gsm-anim.is-leaving {
+		transition: none !important;
+		animation: none !important;
+	}
+
+	.gsm-bg,
+	.gsm-slide-content,
+	.gsm-btn,
+	.gsm-content-hover,
+	.gsm-video,
+	.gsm-glass,
+	.gsm-thumb-slide {
+		transition: none !important;
+		animation: none !important;
+	}
+
+	.gsm-effect-zoom,
+	.swiper-slide-active .gsm-effect-zoom,
+	.gsm-cinematic .gsm-bg,
+	.gsm-cinematic.gsm-cinematic-active .gsm-bg,
+	.gsm-video-cinematic-intro .gsm-video,
+	.gsm-video-cinematic-intro.gsm-video-intro-active .gsm-video {
+		animation: none !important;
+		transition: none !important;
+		filter: none !important;
+		transform: none !important;
+	}
+
+	.gsm-slider.gsm-swipe-hint .swiper-wrapper {
+		animation: none !important;
+	}
+
+	/* LQIP: no blur / scale swap animation */
+	.gsm-lqip-loading,
+	.gsm-lqip-loaded {
+		filter: none !important;
+		transform: none !important;
+		transition: none !important;
+	}
+}
+
+/* =========================================================
+   21. Mobile Overrides
+   ========================================================= */
+@media (max-width: 768px) {
+	/* Content always readable */
+	.gsm-slide-content {
+		max-width: 100% !important;
+		margin: 0 !important;
+		padding: 20px 24px;
+	}
+
+	/* Larger touch targets for dots */
+	.swiper-pagination-bullet {
+		width: 10px !important;
+		height: 10px !important;
+		margin: 0 5px !important;
+	}
+
+	/* Thumbnail strip scrollable on mobile */
+	.gsm-thumbs-container {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		overscroll-behavior-x: contain;
+	}
+
+	.gsm-thumbs-swiper {
+		padding-bottom: 4px;
+	}
+
+	/* Prevent text from being too small */
+	.gsm-slide-content h1,
+	.gsm-slide-content h2,
+	.gsm-slide-content h3,
+	.gsm-slide-content h4,
+	.gsm-slide-content h5,
+	.gsm-slide-content h6,
+	.gsm-slide-content .gsm-heading {
+		font-size: clamp(18px, 5vw, 36px);
+		line-height: 1.25;
+	}
+
+	.gsm-slide-content p {
+		font-size: clamp(13px, 3.5vw, 18px);
+		line-height: 1.55;
+	}
+
+	/* Full-width button on small screens */
+	.gsm-btn {
+		display: block;
+		text-align: center;
+		width: 100%;
+		max-width: 280px;
+		padding: 10px 20px;
+		font-size: 0.875rem;
+	}
+
+	.gsm-btn-prev,
+	.gsm-btn-next {
+		width: 36px;
+		height: 36px;
+	}
+
+	/* Glass effect lighter on mobile (performance) */
+	.gsm-glass {
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
+	}
+
+	/* Arrow position adjustments on mobile */
+	.gsm-arrow-outside .gsm-btn-prev { left: 8px; }
+	.gsm-arrow-outside .gsm-btn-next { right: 8px; }
+
+	.gsm-slider.gsm-swipe-hint .swiper-wrapper {
+		animation: gsm-swipe-hint 0.8s ease 1.5s 1;
+	}
+
+	.gsm-lightbox-inner {
+		width: 96vw;
+	}
+	.gsm-lightbox-btn {
+		width: 56px;
+		height: 56px;
+	}
+	.gsm-lightbox-play-icon {
+		font-size: 22px;
+	}
+}
+
+/* Swipe hint animation on first load */
+@keyframes gsm-swipe-hint {
+	0%   { transform: translateX(0); }
+	30%  { transform: translateX(-12px); }
+	60%  { transform: translateX(4px); }
+	100% { transform: translateX(0); }
+}
+
+/* =========================================================
+   21. Safe Area Insets (notch support)
+   ========================================================= */
+@supports (padding: max(0px)) {
+	.gsm-slide-inner {
+		padding-left:  max(20px, env(safe-area-inset-left));
+		padding-right: max(20px, env(safe-area-inset-right));
+	}
+
+	.gsm-btn-prev {
+		left: max(16px, env(safe-area-inset-left));
+	}
+
+	.gsm-btn-next {
+		right: max(16px, env(safe-area-inset-right));
+	}
+}
+
+/* =========================================================
+   20. WooCommerce Sale Badge
+   ========================================================= */
+.gsm-sale-badge {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	z-index: 10;
+	background: #e74c3c;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	padding: 4px 12px;
+	border-radius: 20px;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	pointer-events: none;
+	box-shadow: 0 2px 8px rgba(231, 76, 60, 0.45);
+	animation: gsm-badge-pop 0.3s ease both;
+}
+
+@keyframes gsm-badge-pop {
+	from { transform: scale(0.7); opacity: 0; }
+	to   { transform: scale(1);   opacity: 1; }
+}
+
+/* =========================================================
+   22. Ken Burns Effect
+   ========================================================= */
+.gsm-effect-kenburns .gsm-bg {
+	transform: scale(1.01); /* Prevent initial rendering flicker */
+	will-change: transform;
+}
+
+.swiper-slide-active.gsm-effect-kenburns .gsm-bg {
+	animation: gsm-kenburns 12s linear forwards;
+}
+
+@keyframes gsm-kenburns {
+	0%   { transform: scale(1.01); }
+	100% { transform: scale(1.18); }
+}
+
+/* =========================================================
+   23. Autoplay Progress Bar
+   ========================================================= */
+.gsm-autoplay-progress {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 4px; /* Default height, could be dynamic in pro version */
+	background: rgba(255, 255, 255, 0.2);
+	z-index: 20; /* High enough to be over slides and under pagination if needed */
+	pointer-events: none;
+}
+
+.gsm-progress-bar {
+	height: 100%;
+	width: 0%; /* JS will update this */
+	background: #ffffff;
+	transition: width 0.1s linear; /* Smooth visual update between JS frames */
+}
+
+/* =========================================================
+   24. Editor Templates Modal
+   ========================================================= */
+#gsm-templates-modal {
+	/* display:flex always so opacity/transform can animate (avoid none↔flex snap). */
+	display: flex;
+	position: fixed;
+	inset: 0;
+	z-index: 9999999;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.26s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#gsm-templates-modal.open {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.gsm-tpl-backdrop {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	background: rgba(0, 0, 0, 0.7);
+	/*
+	 * Must stay pointer-events: none while modal is closed. The root #gsm-templates-modal
+	 * also uses pointer-events: none when closed, but a child with pointer-events: auto
+	 * still receives hits — leaving an invisible full-screen layer that blocks the editor.
+	 */
+	pointer-events: none;
+}
+
+#gsm-templates-modal.open .gsm-tpl-backdrop {
+	pointer-events: auto;
+}
+
+.gsm-tpl-dialog {
+	position: relative;
+	z-index: 1;
+	/* Same as backdrop: avoid blocking the editor when the modal is visually closed. */
+	pointer-events: none;
+	background: #fff;
+	border-radius: 10px;
+	width: 880px;
+	max-width: 95vw;
+	max-height: 85vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+	transform: translateY(14px) scale(0.97);
+	transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#gsm-templates-modal.open .gsm-tpl-dialog {
+	transform: translateY(0) scale(1);
+	pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#gsm-templates-modal {
+		transition-duration: 0.01ms;
+	}
+
+	.gsm-tpl-dialog {
+		transition-duration: 0.01ms;
+		transform: none;
+	}
+
+	#gsm-templates-modal.open .gsm-tpl-dialog {
+		transform: none;
+	}
+}
+
+.gsm-tpl-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 18px 24px;
+	border-bottom: 1px solid #e5e5e5;
+	flex-shrink: 0;
+}
+
+.gsm-tpl-title {
+	font-size: 16px;
+	font-weight: 600;
+	color: #111;
+}
+
+.gsm-tpl-close {
+	background: none;
+	border: none;
+	font-size: 22px;
+	cursor: pointer;
+	color: #888;
+	line-height: 1;
+	padding: 0 4px;
+}
+
+.gsm-tpl-close:hover {
+	color: #111;
+}
+
+.gsm-tpl-filters {
+	display: flex;
+	gap: 8px;
+	padding: 14px 24px;
+	border-bottom: 1px solid #f0f0f0;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+}
+
+.gsm-tpl-filter {
+	padding: 5px 14px;
+	border-radius: 20px;
+	border: 1px solid #ddd;
+	background: #fff;
+	font-size: 12px;
+	cursor: pointer;
+	color: #555;
+	transition: all 0.15s;
+}
+
+.gsm-tpl-filter.on,
+.gsm-tpl-filter:hover {
+	background: #111;
+	color: #fff;
+	border-color: #111;
+}
+
+.gsm-tpl-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+	padding: 20px 24px;
+	overflow-y: auto;
+	flex: 1;
+}
+
+.gsm-tpl-card {
+	border: 2px solid #e5e5e5;
+	border-radius: 8px;
+	overflow: hidden;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.gsm-tpl-card:hover {
+	border-color: #888;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.gsm-tpl-card.selected {
+	border-color: #0066cc;
+	box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+}
+
+.gsm-tpl-card__thumb {
+	position: relative;
+	overflow: hidden;
+}
+
+.gsm-tpl-card__thumb img {
+	width: 100%;
+	height: 140px;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.3s ease;
+}
+
+.gsm-tpl-card:hover .gsm-tpl-card__thumb img {
+	transform: scale(1.04);
+}
+
+.gsm-tpl-preview-btn {
+	position: absolute;
+	inset: 0;
+	margin: 0;
+	background: rgba(0, 0, 0, 0);
+	color: transparent;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	font-size: 12px;
+	font-weight: 500;
+	font-family: inherit;
+	transition: background 0.2s, color 0.2s;
+}
+
+.gsm-tpl-card:hover .gsm-tpl-preview-btn {
+	background: rgba(0, 0, 0, 0.55);
+	color: #fff;
+}
+
+.gsm-tpl-preview-btn svg {
+	flex-shrink: 0;
+}
+
+.gsm-tpl-preview-btn span {
+	pointer-events: none;
+}
+
+.gsm-tpl-card-body {
+	padding: 10px 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.gsm-tpl-card-body strong {
+	font-size: 13px;
+	color: #111;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.gsm-tpl-card-body span {
+	font-size: 11px;
+	color: #888;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.gsm-tpl-footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	padding: 14px 24px;
+	border-top: 1px solid #e5e5e5;
+	flex-shrink: 0;
+}
+
+.gsm-tpl-cancel {
+	padding: 8px 20px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	background: #fff;
+	font-size: 13px;
+	cursor: pointer;
+	color: #555;
+}
+
+.gsm-tpl-cancel:hover {
+	background: #f5f5f5;
+}
+
+.gsm-tpl-import {
+	padding: 8px 22px;
+	border-radius: 5px;
+	border: none;
+	background: #0066cc;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.gsm-tpl-import:hover:not(:disabled) {
+	background: #0052a3;
+}
+
+.gsm-tpl-import:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+/* =========================================================
+   Template live preview (Elementor editor)
+   ========================================================= */
+#gsm-preview-modal {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 10000000;
+	align-items: center;
+	justify-content: center;
+}
+
+#gsm-preview-modal.open {
+	display: flex;
+}
+
+.gsm-preview-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.85);
+	backdrop-filter: blur(4px);
+}
+
+.gsm-preview-dialog {
+	position: relative;
+	z-index: 1;
+	background: #1a1a2e;
+	border-radius: 14px;
+	width: 900px;
+	max-width: 96vw;
+	overflow: hidden;
+	box-shadow: 0 32px 100px rgba(0, 0, 0, 0.6);
+	display: flex;
+	flex-direction: column;
+}
+
+.gsm-preview-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 20px;
+	background: rgba(255, 255, 255, 0.05);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	flex-shrink: 0;
+}
+
+.gsm-preview-title {
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+}
+
+.gsm-preview-header-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.gsm-preview-import-btn {
+	padding: 7px 18px;
+	border-radius: 7px;
+	border: none;
+	background: #6c63ff;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.15s;
+	font-family: inherit;
+}
+
+.gsm-preview-import-btn:hover {
+	background: #5650d4;
+}
+
+.gsm-preview-close {
+	background: rgba(255, 255, 255, 0.1);
+	border: none;
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	font-size: 18px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.15s;
+	line-height: 1;
+	font-family: inherit;
+}
+
+.gsm-preview-close:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.gsm-preview-stage {
+	position: relative;
+	flex-shrink: 0;
+}
+
+.gsm-preview-slider-wrap {
+	width: 100%;
+	aspect-ratio: 16 / 7;
+	overflow: hidden;
+	position: relative;
+	background: #0f0f0f;
+}
+
+/* Override global .gsm-slider { height: 520px } so preview fills the aspect-ratio box. */
+.gsm-preview-slider-wrap .gsm-preview-instance.gsm-slider {
+	width: 100%;
+	height: 100% !important;
+	min-height: 0;
+	max-height: none;
+}
+
+.gsm-preview-instance {
+	width: 100%;
+	height: 100%;
+}
+
+/* When Swiper fails to load in the editor panel, show first slide only (no fade CSS). */
+.gsm-preview-fallback .swiper-slide {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+.gsm-preview-fallback .swiper-slide:not( :first-child ) {
+	display: none !important;
+}
+
+.gsm-preview-slider-wrap .gsm-preview-instance .swiper-wrapper {
+	height: 100%;
+}
+
+.gsm-preview-instance .gsm-slide {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.gsm-preview-info {
+	padding: 12px 20px;
+	background: rgba(255, 255, 255, 0.03);
+	border-top: 1px solid rgba(255, 255, 255, 0.06);
+	flex-shrink: 0;
+}
+
+.gsm-preview-info-inner {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.gsm-preview-tag {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 20px;
+	font-size: 11px;
+	font-weight: 500;
+	background: rgba(255, 255, 255, 0.08);
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.gsm-preview-instance .swiper-button-prev,
+.gsm-preview-instance .swiper-button-next {
+	color: #fff;
+	width: 36px;
+	height: 36px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.gsm-preview-instance .swiper-button-prev::after,
+.gsm-preview-instance .swiper-button-next::after {
+	display: none;
+}
+
+/* Match main slider: bullets bottom-center (preview omits .gsm-pagination class by default). */
+.gsm-preview-instance .gsm-preview-pagination.swiper-pagination {
+	position: absolute;
+	bottom: 16px;
+	left: 0;
+	right: 0;
+	top: auto;
+	width: 100%;
+	z-index: 12;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+	padding: 0;
+	transform: none;
+	--swiper-pagination-color: #fff;
+	--swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.35);
+}
+
+.gsm-preview-instance .gsm-preview-pagination .swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	margin: 0 !important;
+	opacity: 1;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.gsm-preview-instance .gsm-preview-pagination .swiper-pagination-bullet-active {
+	background: #fff;
+	transform: scale(1.25);
+}
+
+/* =========================================================
+   Typing effect heading
+   ========================================================= */
+.gsm-typing-wrap {
+	display: block;
+}
+
+.gsm-typing-cursor {
+	display: inline-block;
+	color: #fff;
+	font-weight: 300;
+	margin-left: 2px;
+	animation: gsm-blink 0.75s step-end infinite;
+}
+
+@keyframes gsm-blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.gsm-typing-cursor {
+		animation: none;
+	}
+}
+
+/* =========================================================
+   Split screen layout
+   ========================================================= */
+.gsm-split {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	z-index: 2;
+}
+
+.gsm-split--reverse {
+	flex-direction: row-reverse;
+}
+
+.gsm-split__image {
+	position: relative;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.gsm-split__img-inner {
+	position: absolute;
+	inset: 0;
+	transition: transform 7s ease;
+}
+
+.swiper-slide-active .gsm-split__img-inner {
+	transform: scale(1.05);
+}
+
+.gsm-split__content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.gsm-split__content-inner {
+	padding: 40px 48px;
+	max-width: 520px;
+	width: 100%;
+	color: #fff;
+}
+
+.gsm-split__content-inner h1,
+.gsm-split__content-inner h2,
+.gsm-split__content-inner h3,
+.gsm-split__content-inner h4,
+.gsm-split__content-inner h5,
+.gsm-split__content-inner h6 {
+	color: #fff;
+	margin: 12px 0;
+	line-height: 1.2;
+}
+
+.gsm-split__content-inner p {
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 1.65;
+	margin: 0 0 20px;
+}
+
+.gsm-split--diagonal .gsm-split__image::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -40px;
+	width: 80px;
+	height: 100%;
+	background: inherit;
+	clip-path: polygon(0 0, 0% 100%, 100% 100%);
+	z-index: 3;
+}
+
+.gsm-split--diagonal.gsm-split--reverse .gsm-split__image::after {
+	right: auto;
+	left: -40px;
+	clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.gsm-badge-inline {
+	display: inline-block;
+	padding: 4px 12px;
+	border-radius: 20px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 14px;
+}
+
+@media (max-width: 768px) {
+	.gsm-split {
+		flex-direction: column !important;
+	}
+
+	.gsm-split__image {
+		flex: 0 0 45% !important;
+	}
+
+	.gsm-split__content {
+		flex: 0 0 55% !important;
+	}
+
+	.gsm-split__content-inner {
+		padding: 20px 24px;
+	}
+}
+
+/* =========================================================
+   3D tilt (scoped to GSM slider only)
+   ========================================================= */
+.gsm-slider .swiper-slide {
+	transform-style: preserve-3d;
+	will-change: transform;
+}
+
+.gsm-tilt-glare {
+	position: absolute;
+	inset: 0;
+	z-index: 8;
+	pointer-events: none;
+	opacity: 0;
+	border-radius: inherit;
+	transition: opacity 0.3s ease;
+}
+
+/* ======= PARTICLES ======= */
+.gsm-particles-canvas {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	pointer-events: none;
+	display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.gsm-particles-canvas {
+		display: none;
+	}
+}
+
+/* ======= COUNTDOWN TIMER ======= */
+.gsm-countdown {
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.gsm-countdown--above-content {
+	order: -1;
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.gsm-countdown--bottom-center {
+	position: absolute;
+	bottom: 32px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	margin-top: 0;
+}
+
+.gsm-countdown-inner {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* Blocks style */
+.gsm-countdown--blocks .gsm-countdown-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 64px;
+	padding: 12px 8px;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.35);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+}
+
+/* Minimal style */
+.gsm-countdown--minimal .gsm-countdown-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 52px;
+	padding: 4px 6px;
+	background: none;
+}
+
+/* Circle style */
+.gsm-countdown--circle .gsm-countdown-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.gsm-countdown-number {
+	font-size: 28px;
+	font-weight: 700;
+	color: #ffffff;
+	line-height: 1;
+	display: block;
+	font-variant-numeric: tabular-nums;
+	transition: transform 0.15s ease;
+}
+
+.gsm-countdown--minimal .gsm-countdown-number {
+	font-size: 32px;
+}
+
+.gsm-countdown--circle .gsm-countdown-number {
+	font-size: 22px;
+}
+
+.gsm-countdown-label {
+	font-size: 10px;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.7);
+	text-transform: uppercase;
+	letter-spacing: .06em;
+	margin-top: 4px;
+	display: block;
+}
+
+.gsm-countdown-sep {
+	font-size: 24px;
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.6);
+	line-height: 1;
+	margin-bottom: 14px;
+	align-self: flex-start;
+	padding-top: 10px;
+}
+
+.gsm-countdown--minimal .gsm-countdown-sep {
+	font-size: 28px;
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.gsm-countdown--circle .gsm-countdown-sep {
+	display: none;
+}
+
+/* Flip animation */
+@keyframes gsm-flip-anim {
+	0% {
+		transform: translateY(-8px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.gsm-countdown-number.gsm-flip {
+	animation: gsm-flip-anim 0.2s ease forwards;
+}
+
+/* Urgency flash */
+@keyframes gsm-urgency {
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+}
+
+.gsm-countdown--urgent .gsm-countdown-number {
+	color: #ff4d4d !important;
+	animation: gsm-urgency 0.8s ease infinite;
+}
+
+.gsm-countdown--urgent.gsm-countdown--blocks .gsm-countdown-item {
+	border: 1px solid rgba(255, 77, 77, 0.5);
+}
+
+/* Expired message */
+.gsm-countdown-expired {
+	font-size: 20px;
+	font-weight: 700;
+	color: #ff4d4d;
+	text-align: center;
+	padding: 12px 20px;
+	background: rgba(255, 77, 77, 0.15);
+	border: 1px solid rgba(255, 77, 77, 0.3);
+	border-radius: 8px;
+	animation: gsm-urgency 1s ease infinite;
+}
+
+@media (max-width: 768px) {
+	.gsm-countdown-number {
+		font-size: 22px;
+	}
+
+	.gsm-countdown--blocks .gsm-countdown-item {
+		min-width: 50px;
+		padding: 8px 6px;
+	}
+
+	.gsm-countdown--circle .gsm-countdown-item {
+		width: 54px;
+		height: 54px;
+	}
+
+	.gsm-countdown--circle .gsm-countdown-number {
+		font-size: 18px;
+	}
+
+	.gsm-countdown-sep {
+		font-size: 18px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.gsm-countdown-number.gsm-flip {
+		animation: none;
+	}
+
+	.gsm-countdown--urgent .gsm-countdown-number {
+		animation: none;
+	}
+
+	.gsm-countdown-expired {
+		animation: none;
+	}
+}
+
+/* =========================================================
+   MOUSEWHEEL NAVIGATION UI
+   ========================================================= */
+
+.gsm-slider-main--mousewheel {
+	position: relative;
+	width: 100%;
+}
+
+/* Scroll indicator */
+.gsm-scroll-indicator {
+	position: absolute;
+	bottom: 28px;
+	left: 50%;
+	transform: translateX(-50%) translateY(20px);
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.gsm-scroll-indicator--visible {
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
+}
+
+.gsm-scroll-indicator__icon svg {
+	display: block;
+}
+
+/* Animated scroll dot — transform (scales with SVG viewBox; avoids cy keyframes) */
+@keyframes gsm-scroll-bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	50% {
+		/* ~10 viewBox units vs ~6px dot height — scales with SVG */
+		transform: translateY(166.67%);
+		opacity: 0.4;
+	}
+}
+
+.gsm-scroll-dot-wrap {
+	transform-origin: center center;
+	transform-box: fill-box;
+	animation: gsm-scroll-bounce 1.6s ease-in-out infinite;
+}
+
+.gsm-scroll-indicator__text {
+	font-size: 11px;
+	color: rgba(255, 255, 255, 0.65);
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+/* Side progress bar */
+.gsm-scroll-progress {
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 120px;
+	width: 24px;
+}
+
+.gsm-scroll-progress-track {
+	width: 2px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 2px;
+	overflow: hidden;
+	position: relative;
+}
+
+.gsm-scroll-progress-fill {
+	width: 100%;
+	height: 0%;
+	background: #ffffff;
+	border-radius: 2px;
+	transition: height 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+	position: absolute;
+	top: 0;
+}
+
+/* Mobile — hide mousewheel UI */
+@media (max-width: 768px) {
+
+	.gsm-scroll-indicator,
+	.gsm-scroll-progress {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.gsm-scroll-dot-wrap {
+		animation: none;
+	}
+
+	.gsm-scroll-progress-fill {
+		transition: none;
+	}
+}
+
+/* ==============================
+   BOOK SHOWCASE LAYOUT
+   ============================== */
+
+/*
+ * .gsm-book-layout covers the slide via position:absolute (same as .gsm-bg, overlay, etc.)
+ * .gsm-book-layout-inner sits inside with height:100% + padding → guaranteed vertical gap.
+ * This works in both boxed and full-width Elementor containers because
+ * .gsm-slide always has position:relative and a resolved height from Swiper.
+ */
+.gsm-book-layout {
+	position: absolute;
+	inset: 0;
+	z-index: 5;
+	color: #fff;
+}
+
+.gsm-book-layout-inner {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: clamp(1.25rem, 5vh, 4rem) clamp(1rem, 3vw, 2.5rem);
+}
+
+.gsm-book-heading {
+	font-size: clamp(1.6rem, 3.2vw, 2.75rem);
+}
+
+.gsm-book-heading-accent {
+	color: #d4b44a;
+	font-weight: 700;
+}
+
+/* Primary + ghost buttons in book hero */
+.gsm-book-btn-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 15px;
+}
+
+.gsm-book-layout .gsm-btn.gsm-btn--ghost {
+	background-color: transparent !important;
+	color: #fff !important;
+	border: 1px solid rgba(255, 255, 255, 0.88) !important;
+	box-shadow: none !important;
+}
+
+.gsm-book-layout .gsm-btn.gsm-btn--ghost:hover {
+	background-color: rgba(255, 255, 255, 0.12) !important;
+	color: #fff !important;
+	border-color: #fff !important;
+	transform: translateY(-2px);
+}
+
+/* ---- Book Grid ---- */
+.gsm-book-grid-wrap {
+	width: 100%;
+	padding: 0 8px;
+	box-sizing: border-box;
+}
+
+.gsm-book-content {
+	padding: 0 8px;
+	box-sizing: border-box;
+}
+
+.gsm-book-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+	width: 100%;
+	max-width: none;
+}
+
+/* ---- Book Card ---- */
+.gsm-book-card {
+	position: relative;
+	cursor: pointer;
+}
+
+.gsm-book-inner {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 3D hover tilt (stronger than resting fan tilt on card) */
+.gsm-book-card:hover .gsm-book-inner {
+	transform: perspective(600px) rotateY(-10deg) rotateX(5deg) scale(1.05);
+}
+
+/* ---- Book Cover ---- */
+.gsm-book-cover-wrap {
+	position: relative;
+	border-radius: 4px 8px 8px 4px;
+	overflow: hidden;
+	border: 2px solid rgba(255, 255, 255, 0.92);
+	box-shadow:
+		-4px 4px 12px rgba(0, 0, 0, 0.4),
+		2px 2px 6px rgba(0, 0, 0, 0.2),
+		inset -2px 0 6px rgba(0, 0, 0, 0.15);
+	aspect-ratio: 3 / 4;
+	background: rgba(255, 255, 255, 0.05);
+	box-sizing: border-box;
+}
+
+.gsm-book-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.gsm-book-card:hover .gsm-book-cover {
+	transform: scale(1.06);
+}
+
+.gsm-book-cover--placeholder {
+	min-height: 0;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+/* Book spine — left edge dark line */
+.gsm-book-spine {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	min-width: 8px;
+	padding: 0 4px;
+	height: 100%;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+	border-radius: 4px 0 0 4px;
+	box-sizing: border-box;
+	z-index: 2;
+}
+
+/* Shine effect on hover */
+.gsm-book-shine {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.18) 0%,
+		rgba(255, 255, 255, 0) 50%,
+		rgba(255, 255, 255, 0.04) 100%
+	);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.gsm-book-card:hover .gsm-book-shine {
+	opacity: 1;
+}
+
+/* Drop shadow strengthens on hover */
+.gsm-book-card:hover .gsm-book-cover-wrap {
+	box-shadow:
+		-8px 12px 24px rgba(0, 0, 0, 0.5),
+		4px 4px 12px rgba(0, 0, 0, 0.3),
+		inset -2px 0 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Book Title ---- */
+.gsm-book-title {
+	margin-top: 8px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 1.4;
+	text-align: center;
+	color: #fff;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+/* ---- Floating Animations (on inner — avoids conflict with card entry transform) ---- */
+@keyframes gsm-book-float-a {
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-8px);
+	}
+}
+
+@keyframes gsm-book-float-b {
+
+	0%,
+	100% {
+		transform: translateY(-6px);
+	}
+
+	50% {
+		transform: translateY(4px);
+	}
+}
+
+.gsm-book-inner.gsm-book-float.is-visible.gsm-book-float--a {
+	animation: gsm-book-float-a 3.5s ease-in-out infinite;
+}
+
+.gsm-book-inner.gsm-book-float.is-visible.gsm-book-float--b {
+	animation: gsm-book-float-b 4s ease-in-out infinite 0.5s;
+}
+
+/* Pause float on hover (3D tilt takes over) */
+.gsm-book-card:hover .gsm-book-inner.gsm-book-float {
+	animation-play-state: paused !important;
+}
+
+/* ---- Stagger entry + resting “fan” tilt per cell ---- */
+.gsm-book-card.gsm-anim {
+	opacity: 0;
+}
+
+.gsm-book-card--tilt-0.gsm-anim {
+	transform: translateY(32px) perspective(900px) rotateY(-7deg) rotateX(3deg);
+}
+
+.gsm-book-card--tilt-0.gsm-anim.is-visible {
+	opacity: 1;
+	transform: translateY(0) perspective(900px) rotateY(-7deg) rotateX(3deg);
+}
+
+.gsm-book-card--tilt-1.gsm-anim {
+	transform: translateY(32px) perspective(900px) rotateY(6deg) rotateX(-2deg);
+}
+
+.gsm-book-card--tilt-1.gsm-anim.is-visible {
+	opacity: 1;
+	transform: translateY(0) perspective(900px) rotateY(6deg) rotateX(-2deg);
+}
+
+.gsm-book-card--tilt-2.gsm-anim {
+	transform: translateY(32px) perspective(900px) rotateY(-4deg) rotateX(-3deg);
+}
+
+.gsm-book-card--tilt-2.gsm-anim.is-visible {
+	opacity: 1;
+	transform: translateY(0) perspective(900px) rotateY(-4deg) rotateX(-3deg);
+}
+
+.gsm-book-card--tilt-3.gsm-anim {
+	transform: translateY(32px) perspective(900px) rotateY(8deg) rotateX(2deg);
+}
+
+.gsm-book-card--tilt-3.gsm-anim.is-visible {
+	opacity: 1;
+	transform: translateY(0) perspective(900px) rotateY(8deg) rotateX(2deg);
+}
+
+/* Tablet & Mobile Stacking */
+@media (max-width: 1024px) {
+
+	.gsm-book-layout-inner {
+		flex-direction: column !important;
+		align-items: stretch !important;
+		padding: 20px 16px !important;
+		overflow-y: auto;
+	}
+
+	.gsm-book-content {
+		flex: 0 0 auto !important;
+		padding: 0 4px 12px !important;
+	}
+
+	.gsm-book-grid-wrap {
+		flex: 0 0 auto !important;
+		padding: 12px 4px 0 !important;
+	}
+
+	.gsm-book-grid {
+		max-width: 100%;
+		gap: 16px;
+	}
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+	.gsm-book-grid {
+		gap: 10px;
+	}
+
+	.gsm-book-title {
+		font-size: 11px;
+	}
+
+	.gsm-book-btn-row {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.gsm-book-btn-row .gsm-btn {
+		text-align: center;
+		justify-content: center;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.gsm-book-inner.gsm-book-float {
+		animation: none !important;
+	}
+
+	.gsm-book-inner {
+		transition: none !important;
+	}
+
+	.gsm-book-card:hover .gsm-book-inner {
+		transform: none;
+	}
+
+	.gsm-book-card--tilt-0.gsm-anim,
+	.gsm-book-card--tilt-1.gsm-anim,
+	.gsm-book-card--tilt-2.gsm-anim,
+	.gsm-book-card--tilt-3.gsm-anim,
+	.gsm-book-card--tilt-0.gsm-anim.is-visible,
+	.gsm-book-card--tilt-1.gsm-anim.is-visible,
+	.gsm-book-card--tilt-2.gsm-anim.is-visible,
+	.gsm-book-card--tilt-3.gsm-anim.is-visible {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+/* =========================================================
+   Book Ribbon Badge
+   ========================================================= */
+.gsm-book-ribbon {
+	position: absolute;
+	top: 10px;
+	right: -2px;
+	padding: 4px 10px;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	color: #111111;
+	border-radius: 4px 4px 0 4px;
+	z-index: 10;
+	white-space: nowrap;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.30), -2px 2px 0 rgba(0,0,0,0.18);
+	pointer-events: none;
+}
+
+/* Tiny folded corner effect */
+.gsm-book-ribbon::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	right: 0;
+	border-width: 5px 5px 0 0;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0.25) transparent transparent transparent;
+}
+
+/* =========================================================
+   Book Spine Text
+   ========================================================= */
+.gsm-book-spine {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.gsm-book-spine-text {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+	transform: rotate(180deg);
+	font-size: 12px;
+	font-weight: 600;
+	color: rgba(255, 255, 255, 0.88);
+	letter-spacing: 0.07em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-height: 90%;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	line-height: 1;
+}

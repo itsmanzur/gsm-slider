@@ -1,0 +1,814 @@
+# GSM Slider for Elementor
+# Copyright (C) 2025
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: GSM Slider for Elementor 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gsm-elementor\n"
+"POT-Creation-Date: 2025-01-01T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME \n"
+"Language-Team: LANGUAGE \n"
+"X-Generator: WP-CLI 2.x\n"
+"X-Domain: gsm-slider\n"
+
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+msgid "GSM Slider for Elementor"
+msgstr ""
+
+msgid "Elementor"
+msgstr ""
+
+msgid "GSM Slider"
+msgstr ""
+
+msgid "slider"
+msgstr ""
+
+msgid "gsm-slider"
+msgstr ""
+
+msgid "carousel"
+msgstr ""
+
+msgid "hero"
+msgstr ""
+
+msgid "banner"
+msgstr ""
+
+msgid "video"
+msgstr ""
+
+msgid "slideshow"
+msgstr ""
+
+msgid "Slides"
+msgstr ""
+
+msgid "Content Source"
+msgstr ""
+
+msgid "Custom Slides"
+msgstr ""
+
+msgid "WordPress Posts"
+msgstr ""
+
+msgid "WooCommerce Products"
+msgstr ""
+
+msgid "Post Type"
+msgstr ""
+
+msgid "Category Filter"
+msgstr ""
+
+msgid "Works for standard Post type only."
+msgstr ""
+
+msgid "Include by IDs"
+msgstr ""
+
+msgid "Exclude by IDs"
+msgstr ""
+
+msgid "12, 34, 56"
+msgstr ""
+
+msgid "12, 34"
+msgstr ""
+
+msgid "Number of Slides"
+msgstr ""
+
+msgid "Order By"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Random"
+msgstr ""
+
+msgid "Menu Order"
+msgstr ""
+
+msgid "Order"
+msgstr ""
+
+msgid "Newest First"
+msgstr ""
+
+msgid "Oldest First"
+msgstr ""
+
+msgid "Content Animation"
+msgstr ""
+
+msgid "Fade Up"
+msgstr ""
+
+msgid "Fade Left"
+msgstr ""
+
+msgid "Fade Right"
+msgstr ""
+
+msgid "Zoom In"
+msgstr ""
+
+msgid "Button Text"
+msgstr ""
+
+msgid "Read More"
+msgstr ""
+
+msgid "Image Effect"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Zoom In"
+msgstr ""
+
+msgid "Parallax"
+msgstr ""
+
+msgid "Ken Burns"
+msgstr ""
+
+msgid "Overlay Color"
+msgstr ""
+
+msgid "Product Category Filter"
+msgstr ""
+
+msgid "Comma separated Product IDs to show."
+msgstr ""
+
+msgid "Comma separated Product IDs to hide."
+msgstr ""
+
+msgid "Number of Products"
+msgstr ""
+
+msgid "Newest"
+msgstr ""
+
+msgid "Price"
+msgstr ""
+
+msgid "Popularity"
+msgstr ""
+
+msgid "Rating"
+msgstr ""
+
+msgid "Sale Products Only"
+msgstr ""
+
+msgid "Show Price"
+msgstr ""
+
+msgid "Show Sale Badge"
+msgstr ""
+
+msgid "Button Action"
+msgstr ""
+
+msgid "View Product"
+msgstr ""
+
+msgid "Add to Cart"
+msgstr ""
+
+msgid "Media Type"
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "Video"
+msgstr ""
+
+msgid "Background Image"
+msgstr ""
+
+msgid "Image Fit"
+msgstr ""
+
+msgid "Cover"
+msgstr ""
+
+msgid "Contain"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Image Position"
+msgstr ""
+
+msgid "Top Left"
+msgstr ""
+
+msgid "Top Center"
+msgstr ""
+
+msgid "Top Right"
+msgstr ""
+
+msgid "Center Left"
+msgstr ""
+
+msgid "Center Center"
+msgstr ""
+
+msgid "Center Right"
+msgstr ""
+
+msgid "Bottom Left"
+msgstr ""
+
+msgid "Bottom Center"
+msgstr ""
+
+msgid "Bottom Right"
+msgstr ""
+
+msgid "Video Source"
+msgstr ""
+
+msgid "Self-hosted (MP4)"
+msgstr ""
+
+msgid "Embed (YouTube / Vimeo)"
+msgstr ""
+
+msgid "Video URL (MP4)"
+msgstr ""
+
+msgid "https://example.com/video.mp4"
+msgstr ""
+
+msgid "Embed URL (YouTube / Vimeo)"
+msgstr ""
+
+msgid "https://www.youtube.com/watch?v=xxxxx"
+msgstr ""
+
+msgid "Paste any YouTube or Vimeo URL — watch URL, short URL, or embed URL all work."
+msgstr ""
+
+msgid "Video Poster Image"
+msgstr ""
+
+msgid "Cinematic Intro (Blur to Sharp)"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Overlay Type"
+msgstr ""
+
+msgid "Solid Color"
+msgstr ""
+
+msgid "Gradient"
+msgstr ""
+
+msgid "Gradient Start"
+msgstr ""
+
+msgid "Gradient End"
+msgstr ""
+
+msgid "Direction"
+msgstr ""
+
+msgid "Bottom to Top"
+msgstr ""
+
+msgid "Top to Bottom"
+msgstr ""
+
+msgid "Left to Right"
+msgstr ""
+
+msgid "Right to Left"
+msgstr ""
+
+msgid "Diagonal"
+msgstr ""
+
+msgid "Heading"
+msgstr ""
+
+msgid "Slide Heading"
+msgstr ""
+
+msgid "Heading HTML Tag"
+msgstr ""
+
+msgid "H1"
+msgstr ""
+
+msgid "H2"
+msgstr ""
+
+msgid "H3"
+msgstr ""
+
+msgid "H4"
+msgstr ""
+
+msgid "H5"
+msgstr ""
+
+msgid "H6"
+msgstr ""
+
+msgid "div"
+msgstr ""
+
+msgid "p"
+msgstr ""
+
+msgid "span"
+msgstr ""
+
+msgid "Custom CSS Class"
+msgstr ""
+
+msgid "Add custom CSS class to this slide wrapper."
+msgstr ""
+
+msgid "Badge Text"
+msgstr ""
+
+msgid "NEW"
+msgstr ""
+
+msgid "Small badge shown above the heading. e.g. NEW, SALE, HOT"
+msgstr ""
+
+msgid "Badge Background Color"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Add a short description for this slide."
+msgstr ""
+
+msgid "Animation & Layout"
+msgstr ""
+
+msgid "Learn More"
+msgstr ""
+
+msgid "Button URL"
+msgstr ""
+
+msgid "https://example.com"
+msgstr ""
+
+msgid "Video Lightbox"
+msgstr ""
+
+msgid "Enable Lightbox"
+msgstr ""
+
+msgid "Lightbox Video URL"
+msgstr ""
+
+msgid "https://www.youtube.com/watch?v=xxxxx"
+msgstr ""
+
+msgid "YouTube, Vimeo, or direct MP4 URL. Opens in fullscreen when slide is clicked."
+msgstr ""
+
+msgid "Show Play Button"
+msgstr ""
+
+msgid "Play Button Position"
+msgstr ""
+
+msgid "Bottom Left"
+msgstr ""
+
+msgid "Bottom Right"
+msgstr ""
+
+msgid "Position & Size"
+msgstr ""
+
+msgid "Content Align"
+msgstr ""
+
+msgid "Inherit from Widget"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Center"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Vertical Position"
+msgstr ""
+
+msgid "Top"
+msgstr ""
+
+msgid "Middle"
+msgstr ""
+
+msgid "Bottom"
+msgstr ""
+
+msgid "Enable Content Box"
+msgstr ""
+
+msgid "Content Max Width"
+msgstr ""
+
+msgid "Cinematic Slide Effect"
+msgstr ""
+
+msgid "First Slide"
+msgstr ""
+
+msgid "Add a description for your first slide."
+msgstr ""
+
+msgid "Get Started"
+msgstr ""
+
+msgid "Second Slide"
+msgstr ""
+
+msgid "Add a description for your second slide."
+msgstr ""
+
+msgid "Slider Settings"
+msgstr ""
+
+msgid "Slider Height"
+msgstr ""
+
+msgid "Transition Effect"
+msgstr ""
+
+msgid "Cube, Flip, Coverflow, Cards, and Creative transitions require Swiper modules. If they do not work, your Elementor version may not include these modules."
+msgstr ""
+
+msgid "Slide"
+msgstr ""
+
+msgid "Fade"
+msgstr ""
+
+msgid "Cube 3D"
+msgstr ""
+
+msgid "Flip"
+msgstr ""
+
+msgid "Coverflow"
+msgstr ""
+
+msgid "Cards"
+msgstr ""
+
+msgid "Creative (Zoom)"
+msgstr ""
+
+msgid "Creative (Push)"
+msgstr ""
+
+msgid "Coverflow Rotate"
+msgstr ""
+
+msgid "Coverflow Depth"
+msgstr ""
+
+msgid "Slides Per View"
+msgstr ""
+
+msgid "Space Between (px)"
+msgstr ""
+
+msgid "Center Mode"
+msgstr ""
+
+msgid "Autoplay"
+msgstr ""
+
+msgid "Autoplay Delay (ms)"
+msgstr ""
+
+msgid "Pause on Hover"
+msgstr ""
+
+msgid "Show Progress Bar"
+msgstr ""
+
+msgid "Transition Speed (ms)"
+msgstr ""
+
+msgid "Loop"
+msgstr ""
+
+msgid "Arrows"
+msgstr ""
+
+msgid "Pagination"
+msgstr ""
+
+msgid "Bullets"
+msgstr ""
+
+msgid "Progress Bar"
+msgstr ""
+
+msgid "Fraction"
+msgstr ""
+
+msgid "Thumbnail Navigation"
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "Hide"
+msgstr ""
+
+msgid "Thumbnail Height"
+msgstr ""
+
+msgid "Gap Between Thumbs"
+msgstr ""
+
+msgid "Strip Width"
+msgstr ""
+
+msgid "Full Screen Width"
+msgstr ""
+
+msgid "Inline (Fit Content)"
+msgstr ""
+
+msgid "Alignment"
+msgstr ""
+
+msgid "Strip Padding"
+msgstr ""
+
+msgid "Strip Background Color"
+msgstr ""
+
+msgid "Hide Strip Background"
+msgstr ""
+
+msgid "Thumbnail Radius"
+msgstr ""
+
+msgid "Inactive Opacity"
+msgstr ""
+
+msgid "Border Width"
+msgstr ""
+
+msgid "Inactive Border Color"
+msgstr ""
+
+msgid "Active Thumb Border Color"
+msgstr ""
+
+msgid "Mobile Settings"
+msgstr ""
+
+msgid "Height on Mobile"
+msgstr ""
+
+msgid "Show Arrows on Mobile"
+msgstr ""
+
+msgid "Content Font Scale on Mobile"
+msgstr ""
+
+msgid "Content Padding on Mobile"
+msgstr ""
+
+msgid "Content Box"
+msgstr ""
+
+msgid "Background Color"
+msgstr ""
+
+msgid "Glass Morphism Effect"
+msgstr ""
+
+msgid "Glass Blur Intensity (px)"
+msgstr ""
+
+msgid "Hover Lift Effect"
+msgstr ""
+
+msgid "Border Radius"
+msgstr ""
+
+msgid "Padding"
+msgstr ""
+
+msgid "Margin"
+msgstr ""
+
+msgid "Position Offset"
+msgstr ""
+
+msgid "Horizontal Offset"
+msgstr ""
+
+msgid "Vertical Offset"
+msgstr ""
+
+msgid "Text Alignment"
+msgstr ""
+
+msgid "Safe Area Side Padding (px)"
+msgstr ""
+
+msgid "Typography"
+msgstr ""
+
+msgid "Heading Typography"
+msgstr ""
+
+msgid "Heading Color"
+msgstr ""
+
+msgid "Description Typography"
+msgstr ""
+
+msgid "Description Color"
+msgstr ""
+
+msgid "Button"
+msgstr ""
+
+msgid "Text Color"
+msgstr ""
+
+msgid "Hover Background Color"
+msgstr ""
+
+msgid "Hover Text Color"
+msgstr ""
+
+msgid "Border Color"
+msgstr ""
+
+msgid "Border Color Hover"
+msgstr ""
+
+msgid "Button Typography"
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "Arrow Color"
+msgstr ""
+
+msgid "Arrow Hover Color"
+msgstr ""
+
+msgid "Arrow Active Color"
+msgstr ""
+
+msgid "Arrow Position"
+msgstr ""
+
+msgid "Inside"
+msgstr ""
+
+msgid "Outside"
+msgstr ""
+
+msgid "Arrow Size (px)"
+msgstr ""
+
+msgid "Arrow Background"
+msgstr ""
+
+msgid "Arrow Hover Background"
+msgstr ""
+
+msgid "Arrow Border Radius (px)"
+msgstr ""
+
+msgid "Arrow Icon Style"
+msgstr ""
+
+msgid "Chevron"
+msgstr ""
+
+msgid "Angle"
+msgstr ""
+
+msgid "Custom SVG"
+msgstr ""
+
+msgid "Custom SVG Code"
+msgstr ""
+
+msgid "Paste your SVG code here. The same SVG will be mirrored for both arrows."
+msgstr ""
+
+msgid "Dot Color"
+msgstr ""
+
+msgid "Active Dot Color"
+msgstr ""
+
+msgid "Image slider"
+msgstr ""
+
+msgid "Play video in fullscreen"
+msgstr ""
+
+msgid "Slide %1$d of %2$d"
+msgstr ""
+
+msgid "Slide {current} of {total}"
+msgstr ""
+
+msgid "Slide indicators"
+msgstr ""
+
+msgid "Carousel position"
+msgstr ""
+
+msgid "Slide video"
+msgstr ""
+
+msgid "Pause video"
+msgstr ""
+
+msgid "Video lightbox"
+msgstr ""
+
+msgid "Close video"
+msgstr ""
+
+msgid "Pause"
+msgstr ""
+
+msgid "Sale!"
+msgstr ""
+
+msgid "Previous slide"
+msgstr ""
+
+msgid "Next slide"
+msgstr ""
+
+msgid "Go to slide %d"
+msgstr ""
+
+msgid "Slider template imported successfully."
+msgstr ""
+
+msgid "Could not import the template. Please try again."
+msgstr ""
+
+msgid "Could not find this slider in the preview. Click the widget on the canvas, then try importing again."
+msgstr ""
+
+msgid "The server did not return template data. Please try again."
+msgstr ""
