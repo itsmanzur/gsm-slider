@@ -2962,6 +2962,279 @@ class GSM_Slider_Widget extends Widget_Base {
 			)
 		);
 
+		/* ── Responsive Controls ──────────────────────────────────── */
+		$this->add_control(
+			'book_responsive_heading',
+			array(
+				'label'     => esc_html__( 'Responsive Settings', 'gsm-slider' ),
+				'type'      => Controls_Manager::HEADING,
+				'separator' => 'before',
+			)
+		);
+
+		$this->add_control(
+			'book_responsive_desc',
+			array(
+				'type'            => Controls_Manager::RAW_HTML,
+				'raw'             => '<p style="font-size:11px;color:#aaa;margin:0 0 4px;">' . esc_html__( 'Use the device icons (Desktop / Tablet / Mobile) at the top of the panel to switch breakpoints for the controls below.', 'gsm-slider' ) . '</p>',
+				'content_classes' => 'elementor-descriptor',
+			)
+		);
+
+		// ── Slider Height (per breakpoint) ──────────────────────────
+		$this->add_responsive_control(
+			'book_slider_height',
+			array(
+				'label'          => esc_html__( 'Slider Height', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px', 'vh' ),
+				'range'          => array(
+					'px' => array( 'min' => 200, 'max' => 1200 ),
+					'vh' => array( 'min' => 20,  'max' => 100 ),
+				),
+				'tablet_default' => array( 'size' => 700, 'unit' => 'px' ),
+				'mobile_default' => array( 'size' => 620, 'unit' => 'px' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-slider' => 'height: {{SIZE}}{{UNIT}};',
+				),
+				'description'    => esc_html__( 'Override the slider height for this breakpoint. Leave blank to inherit the global Slider Height.', 'gsm-slider' ),
+			)
+		);
+
+		// ── Mobile Layout Mode ──────────────────────────────────────
+		$this->add_control(
+			'book_mobile_layout',
+			array(
+				'label'       => esc_html__( 'Mobile Layout', 'gsm-slider' ),
+				'type'        => Controls_Manager::SELECT,
+				'default'     => 'stack',
+				'options'     => array(
+					'stack'    => esc_html__( 'Stack (content top, books below)', 'gsm-slider' ),
+					'books_up' => esc_html__( 'Books Top (books above, content below)', 'gsm-slider' ),
+					'side'     => esc_html__( 'Side by Side (keep horizontal)', 'gsm-slider' ),
+					'hide_books' => esc_html__( 'Hide Books (content only)', 'gsm-slider' ),
+				),
+				'description' => esc_html__( 'Controls column order when stacked on mobile/tablet.', 'gsm-slider' ),
+				'prefix_class' => 'gsm-book-mobile-',
+			)
+		);
+
+		// ── Inner Padding (per breakpoint) ──────────────────────────
+		$this->add_responsive_control(
+			'book_inner_padding_v',
+			array(
+				'label'          => esc_html__( 'Inner Vertical Padding (px)', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px' ),
+				'range'          => array( 'px' => array( 'min' => 0, 'max' => 120 ) ),
+				'tablet_default' => array( 'size' => 20, 'unit' => 'px' ),
+				'mobile_default' => array( 'size' => 16, 'unit' => 'px' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-layout-inner' => 'padding-top: {{SIZE}}{{UNIT}} !important; padding-bottom: {{SIZE}}{{UNIT}} !important;',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'book_inner_padding_h',
+			array(
+				'label'          => esc_html__( 'Inner Horizontal Padding (px)', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px' ),
+				'range'          => array( 'px' => array( 'min' => 0, 'max' => 120 ) ),
+				'tablet_default' => array( 'size' => 16, 'unit' => 'px' ),
+				'mobile_default' => array( 'size' => 12, 'unit' => 'px' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-layout-inner' => 'padding-left: {{SIZE}}{{UNIT}} !important; padding-right: {{SIZE}}{{UNIT}} !important;',
+				),
+			)
+		);
+
+		// ── Book Grid Columns (per breakpoint) ──────────────────────
+		$this->add_responsive_control(
+			'book_grid_columns_responsive',
+			array(
+				'label'          => esc_html__( 'Book Grid Columns', 'gsm-slider' ),
+				'type'           => Controls_Manager::NUMBER,
+				'min'            => 1,
+				'max'            => 4,
+				'step'           => 1,
+				'default'        => '',
+				'tablet_default' => 2,
+				'mobile_default' => 2,
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-grid' => 'grid-template-columns: repeat({{VALUE}}, 1fr) !important;',
+				),
+				'description'    => esc_html__( 'Number of columns in the book grid for each breakpoint. (1–4)', 'gsm-slider' ),
+			)
+		);
+
+		// ── Book Grid Gap (per breakpoint) ──────────────────────────
+		$this->add_responsive_control(
+			'book_grid_gap',
+			array(
+				'label'          => esc_html__( 'Book Grid Gap', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px' ),
+				'range'          => array(
+					'px' => array( 'min' => 0, 'max' => 60 ),
+				),
+				'tablet_default' => array( 'size' => 12, 'unit' => 'px' ),
+				'mobile_default' => array( 'size' => 8,  'unit' => 'px' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-grid' => 'gap: {{SIZE}}{{UNIT}} !important;',
+				),
+			)
+		);
+
+		// ── Book Grid Max Width (per breakpoint) ────────────────────
+		$this->add_responsive_control(
+			'book_grid_max_width',
+			array(
+				'label'          => esc_html__( 'Book Grid Max Width', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px', '%' ),
+				'range'          => array(
+					'px' => array( 'min' => 100, 'max' => 900 ),
+					'%'  => array( 'min' => 10,  'max' => 100 ),
+				),
+				'tablet_default' => array( 'size' => 100, 'unit' => '%' ),
+				'mobile_default' => array( 'size' => 100, 'unit' => '%' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-grid' => 'max-width: {{SIZE}}{{UNIT}};',
+				),
+				'description'    => esc_html__( 'Limit the total width of the book grid. Useful on tablet to prevent very wide grids.', 'gsm-slider' ),
+			)
+		);
+
+		// ── Heading Font Size (per breakpoint) ──────────────────────
+		$this->add_responsive_control(
+			'book_heading_font_size',
+			array(
+				'label'          => esc_html__( 'Heading Font Size', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px', 'rem', 'vw' ),
+				'range'          => array(
+					'px'  => array( 'min' => 12, 'max' => 80 ),
+					'rem' => array( 'min' => 0.8, 'max' => 5, 'step' => 0.1 ),
+					'vw'  => array( 'min' => 1, 'max' => 10, 'step' => 0.1 ),
+				),
+				'tablet_default' => array( 'size' => 28, 'unit' => 'px' ),
+				'mobile_default' => array( 'size' => 22, 'unit' => 'px' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-heading, {{WRAPPER}} .gsm-book-content .gsm-heading, {{WRAPPER}} .gsm-book-content h1, {{WRAPPER}} .gsm-book-content h2, {{WRAPPER}} .gsm-book-content h3' => 'font-size: {{SIZE}}{{UNIT}} !important;',
+				),
+				'description'    => esc_html__( 'Override the heading font size for this breakpoint.', 'gsm-slider' ),
+			)
+		);
+
+		// ── Description Font Size (per breakpoint) ──────────────────
+		$this->add_responsive_control(
+			'book_desc_font_size',
+			array(
+				'label'          => esc_html__( 'Description Font Size', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px', 'rem' ),
+				'range'          => array(
+					'px'  => array( 'min' => 10, 'max' => 30 ),
+					'rem' => array( 'min' => 0.6, 'max' => 2, 'step' => 0.05 ),
+				),
+				'tablet_default' => array( 'size' => 15, 'unit' => 'px' ),
+				'mobile_default' => array( 'size' => 13, 'unit' => 'px' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-content p' => 'font-size: {{SIZE}}{{UNIT}} !important;',
+				),
+			)
+		);
+
+		// ── Content Section Width (per breakpoint) ──────────────────
+		$this->add_responsive_control(
+			'book_content_col_width',
+			array(
+				'label'          => esc_html__( 'Content Column Width', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( '%', 'px' ),
+				'range'          => array(
+					'%'  => array( 'min' => 20, 'max' => 100 ),
+					'px' => array( 'min' => 100, 'max' => 900 ),
+				),
+				'tablet_default' => array( 'size' => 100, 'unit' => '%' ),
+				'mobile_default' => array( 'size' => 100, 'unit' => '%' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-content' => 'flex: 0 0 {{SIZE}}{{UNIT}} !important; max-width: {{SIZE}}{{UNIT}} !important;',
+				),
+				'description'    => esc_html__( 'Width of the left content column. Set to 100% on mobile to stack full-width.', 'gsm-slider' ),
+			)
+		);
+
+		// ── Book Grid Section Width (per breakpoint) ─────────────────
+		$this->add_responsive_control(
+			'book_grid_col_width',
+			array(
+				'label'          => esc_html__( 'Book Grid Column Width', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( '%', 'px' ),
+				'range'          => array(
+					'%'  => array( 'min' => 20, 'max' => 100 ),
+					'px' => array( 'min' => 100, 'max' => 900 ),
+				),
+				'tablet_default' => array( 'size' => 100, 'unit' => '%' ),
+				'mobile_default' => array( 'size' => 100, 'unit' => '%' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-grid-wrap' => 'flex: 0 0 {{SIZE}}{{UNIT}} !important; max-width: {{SIZE}}{{UNIT}} !important;',
+				),
+				'description'    => esc_html__( 'Width of the right book grid column. Set to 100% on mobile to stack full-width.', 'gsm-slider' ),
+			)
+		);
+
+		// ── Button Size (per breakpoint) ─────────────────────────────
+		$this->add_responsive_control(
+			'book_btn_font_size',
+			array(
+				'label'          => esc_html__( 'Button Font Size', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px' ),
+				'range'          => array(
+					'px' => array( 'min' => 10, 'max' => 24 ),
+				),
+				'tablet_default' => array( 'size' => 14, 'unit' => 'px' ),
+				'mobile_default' => array( 'size' => 13, 'unit' => 'px' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-layout .gsm-btn' => 'font-size: {{SIZE}}{{UNIT}} !important;',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'book_btn_padding_v',
+			array(
+				'label'          => esc_html__( 'Button Vertical Padding (px)', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px' ),
+				'range'          => array( 'px' => array( 'min' => 0, 'max' => 40 ) ),
+				'tablet_default' => array( 'size' => 10, 'unit' => 'px' ),
+				'mobile_default' => array( 'size' => 8, 'unit' => 'px' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-layout .gsm-btn' => 'padding-top: {{SIZE}}{{UNIT}} !important; padding-bottom: {{SIZE}}{{UNIT}} !important;',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'book_btn_padding_h',
+			array(
+				'label'          => esc_html__( 'Button Horizontal Padding (px)', 'gsm-slider' ),
+				'type'           => Controls_Manager::SLIDER,
+				'size_units'     => array( 'px' ),
+				'range'          => array( 'px' => array( 'min' => 0, 'max' => 60 ) ),
+				'tablet_default' => array( 'size' => 20, 'unit' => 'px' ),
+				'mobile_default' => array( 'size' => 16, 'unit' => 'px' ),
+				'selectors'      => array(
+					'{{WRAPPER}} .gsm-book-layout .gsm-btn' => 'padding-left: {{SIZE}}{{UNIT}} !important; padding-right: {{SIZE}}{{UNIT}} !important;',
+				),
+			)
+		);
+
 		$this->end_controls_section();
 	}
 

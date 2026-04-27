@@ -2481,9 +2481,16 @@ body.gsm-lightbox-open {
 	transform: translateY(0) perspective(900px) rotateY(8deg) rotateX(2deg);
 }
 
-/* Tablet & Mobile Stacking */
+/* ── Tablet & Mobile Layout Modes ──────────────────────────── */
+
+/*
+ * Default stacked behavior on tablet/mobile.
+ * When gsm-book-mobile-side is set the horizontal layout is PRESERVED.
+ * The "side" class must override these stacking rules, so it sits below.
+ */
 @media (max-width: 1024px) {
 
+	/* Default: stack (content top, books below) */
 	.gsm-book-layout-inner {
 		flex-direction: column !important;
 		align-items: stretch !important;
@@ -2508,7 +2515,43 @@ body.gsm-lightbox-open {
 		gap: 16px;
 	}
 
-	/* Disable 3D book card effects on low-power mobile devices */
+	/* ── books_up: books appear ABOVE text ────────────────────── */
+	.gsm-book-mobile-books_up .gsm-book-layout-inner {
+		flex-direction: column-reverse !important;
+	}
+
+	.gsm-book-mobile-books_up .gsm-book-content {
+		padding: 12px 4px 0 !important;
+	}
+
+	.gsm-book-mobile-books_up .gsm-book-grid-wrap {
+		padding: 0 4px 12px !important;
+	}
+
+	/* ── side: keep horizontal even on tablet ─────────────────── */
+	.gsm-book-mobile-side .gsm-book-layout-inner {
+		flex-direction: row !important;
+		align-items: center !important;
+		overflow-y: hidden !important;
+		overflow-x: hidden;
+	}
+
+	.gsm-book-mobile-side .gsm-book-content,
+	.gsm-book-mobile-side .gsm-book-grid-wrap {
+		flex: 1 1 50% !important;
+	}
+
+	/* ── hide_books: collapse the book grid panel ─────────────── */
+	.gsm-book-mobile-hide_books .gsm-book-grid-wrap {
+		display: none !important;
+	}
+
+	.gsm-book-mobile-hide_books .gsm-book-content {
+		flex: 1 1 100% !important;
+		max-width: 100% !important;
+	}
+
+	/* Disable 3D hover effects on touch devices */
 	@media (hover: none) {
 		.gsm-book-card:hover .gsm-book-inner {
 			transform: none;
@@ -2519,7 +2562,7 @@ body.gsm-lightbox-open {
 	}
 }
 
-/* Mobile Specific Adjustments */
+/* ── Mobile Specific Adjustments (≤ 768 px) ────────────────── */
 @media (max-width: 768px) {
 	.gsm-book-grid {
 		gap: 10px;
@@ -2537,6 +2580,39 @@ body.gsm-lightbox-open {
 	.gsm-book-btn-row .gsm-btn {
 		text-align: center;
 		justify-content: center;
+	}
+
+	/* Reduce default inner padding on small phones */
+	.gsm-book-layout-inner {
+		padding: 16px 12px !important;
+	}
+
+	/* Reduce heading clamp on narrow screens */
+	.gsm-book-heading {
+		font-size: clamp(1.25rem, 5.5vw, 1.85rem);
+	}
+}
+
+/* ── Small Phone ≤ 480 px ────────────────────────────────────── */
+@media (max-width: 480px) {
+	.gsm-book-grid {
+		gap: 8px;
+	}
+
+	.gsm-book-layout-inner {
+		padding: 12px 10px !important;
+	}
+
+	.gsm-book-heading {
+		font-size: clamp(1.1rem, 5vw, 1.5rem);
+	}
+
+	.gsm-book-title {
+		font-size: 10px;
+	}
+
+	.gsm-book-card {
+		padding: 5px !important;
 	}
 }
 
