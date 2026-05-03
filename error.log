@@ -1,0 +1,2763 @@
+[29-Mar-2026 02:26:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\menu-header.php:293) in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\pluggable.php on line 1531
+[29-Mar-2026 02:26:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\menu-header.php:293) in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\pluggable.php on line 1534
+[29-Mar-2026 02:26:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\menu-header.php:293) in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\pluggable.php on line 1531
+[29-Mar-2026 02:26:16 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\menu-header.php:293) in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\pluggable.php on line 1534
+[29-Mar-2026 02:26:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\menu-header.php:293) in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\pluggable.php on line 1531
+[29-Mar-2026 02:26:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\menu-header.php:293) in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\pluggable.php on line 1534
+[29-Mar-2026 02:33:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\menu-header.php:293) in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\pluggable.php on line 1531
+[29-Mar-2026 02:33:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\menu-header.php:293) in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\pluggable.php on line 1534
+[30-Mar-2026 03:11:55 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[30-Mar-2026 03:12:05 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[30-Mar-2026 03:12:15 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[30-Mar-2026 03:12:21 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[30-Mar-2026 03:12:34 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[30-Mar-2026 03:12:39 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[30-Mar-2026 03:12:40 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[30-Mar-2026 03:51:40 UTC] PHP Warning:  Undefined array key "wp_dummy_content_generator-haveSamePrice" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\wp-dummy-content-generator\includes\functions-products.php on line 78
+[30-Mar-2026 03:51:43 UTC] PHP Warning:  Undefined array key "wp_dummy_content_generator-haveSamePrice" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\wp-dummy-content-generator\includes\functions-products.php on line 78
+[01-Apr-2026 01:57:50 UTC] PHP Fatal error:  Uncaught Exception: Invalid post. in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\settings\page\manager.php:101
+Stack trace:
+#0 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\base\document.php(1811): Elementor\Core\Settings\Page\Manager->ajax_before_save_settings(Array, NULL)
+#1 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\base\document.php(911): Elementor\Core\Base\Document->save_settings(Array)
+#2 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\kits\manager.php(295): Elementor\Core\Base\Document->update_settings(Array)
+#3 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\kits\manager.php(464): Elementor\Core\Kits\Manager->update_kit_settings_based_on_option('site_name', 'Plugin Check')
+#4 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(343): Elementor\Core\Kits\Manager->Elementor\Core\Kits\{closure}('My Site', 'Plugin Check')
+#5 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#7 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\option.php(1020): do_action('update_option_b...', 'My Site', 'Plugin Check', 'blogname')
+#8 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\includes\upgrade.php(82): update_option('blogname', 'Plugin Check')
+#9 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\plugin-check\includes\Checker\Runtime_Environment_Setup.php(289): wp_install('Plugin Check', 'plugincheck', 'demo@pluginchec...', false)
+#10 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\plugin-check\includes\Checker\Runtime_Environment_Setup.php(77): WordPress\Plugin_Check\Checker\Runtime_Environment_Setup->install_wordpress('http://gsttest....', 'hello-elementor...', Array)
+#11 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\plugin-check\includes\Admin\Admin_AJAX.php(184): WordPress\Plugin_Check\Checker\Runtime_Environment_Setup->set_up()
+#12 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(341): WordPress\Plugin_Check\Admin\Admin_AJAX->set_up_environment('')
+#13 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#14 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#15 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_plugin_...')
+#16 {main}
+  thrown in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\settings\page\manager.php on line 101
+[01-Apr-2026 01:57:50 UTC] WordPress database error Table 'local.wp_pc_actionscheduler_actions' doesn't exist for query SELECT COUNT(DISTINCT claim_id) FROM wp_pc_actionscheduler_actions WHERE claim_id != 0 AND status IN ( 'pending', 'in-progress') made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->maybe_dispatch_async_request, ActionScheduler_AsyncRequest_QueueRunner->maybe_dispatch, ActionScheduler_AsyncRequest_QueueRunner->allow, ActionScheduler_Abstract_QueueRunner->has_maximum_concurrent_batches, ActionScheduler_DBStore->get_claim_count
+[01-Apr-2026 01:57:50 UTC] WordPress database error Table 'local.wp_pc_actionscheduler_actions' doesn't exist for query SELECT count(a.action_id) FROM wp_pc_actionscheduler_actions a WHERE 1=1 AND a.status IN ('pending') AND a.scheduled_date_gmt <= '2026-04-01 01:57:50' made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->maybe_dispatch_async_request, ActionScheduler_AsyncRequest_QueueRunner->maybe_dispatch, ActionScheduler_AsyncRequest_QueueRunner->allow, ActionScheduler_Store->has_pending_actions_due, ActionScheduler_DBStore->query_actions
+[01-Apr-2026 02:03:05 UTC] PHP Fatal error:  Uncaught Exception: Invalid post. in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\settings\page\manager.php:101
+Stack trace:
+#0 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\base\document.php(1811): Elementor\Core\Settings\Page\Manager->ajax_before_save_settings(Array, NULL)
+#1 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\base\document.php(911): Elementor\Core\Base\Document->save_settings(Array)
+#2 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\kits\manager.php(295): Elementor\Core\Base\Document->update_settings(Array)
+#3 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\kits\manager.php(464): Elementor\Core\Kits\Manager->update_kit_settings_based_on_option('site_name', 'Plugin Check')
+#4 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(343): Elementor\Core\Kits\Manager->Elementor\Core\Kits\{closure}('My Site', 'Plugin Check')
+#5 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#7 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\option.php(1020): do_action('update_option_b...', 'My Site', 'Plugin Check', 'blogname')
+#8 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\includes\upgrade.php(82): update_option('blogname', 'Plugin Check')
+#9 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\plugin-check\includes\Checker\Runtime_Environment_Setup.php(289): wp_install('Plugin Check', 'plugincheck', 'demo@pluginchec...', false)
+#10 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\plugin-check\includes\Checker\Runtime_Environment_Setup.php(77): WordPress\Plugin_Check\Checker\Runtime_Environment_Setup->install_wordpress('http://gsttest....', 'hello-elementor...', Array)
+#11 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\plugin-check\includes\Admin\Admin_AJAX.php(184): WordPress\Plugin_Check\Checker\Runtime_Environment_Setup->set_up()
+#12 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(341): WordPress\Plugin_Check\Admin\Admin_AJAX->set_up_environment('')
+#13 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#14 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#15 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_plugin_...')
+#16 {main}
+  thrown in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\settings\page\manager.php on line 101
+[01-Apr-2026 02:03:05 UTC] WordPress database error Table 'local.wp_pc_actionscheduler_actions' doesn't exist for query SELECT COUNT(DISTINCT claim_id) FROM wp_pc_actionscheduler_actions WHERE claim_id != 0 AND status IN ( 'pending', 'in-progress') made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->maybe_dispatch_async_request, ActionScheduler_AsyncRequest_QueueRunner->maybe_dispatch, ActionScheduler_AsyncRequest_QueueRunner->allow, ActionScheduler_Abstract_QueueRunner->has_maximum_concurrent_batches, ActionScheduler_DBStore->get_claim_count
+[01-Apr-2026 02:03:05 UTC] WordPress database error Table 'local.wp_pc_actionscheduler_actions' doesn't exist for query SELECT count(a.action_id) FROM wp_pc_actionscheduler_actions a WHERE 1=1 AND a.status IN ('pending') AND a.scheduled_date_gmt <= '2026-04-01 02:03:05' made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->maybe_dispatch_async_request, ActionScheduler_AsyncRequest_QueueRunner->maybe_dispatch, ActionScheduler_AsyncRequest_QueueRunner->allow, ActionScheduler_Store->has_pending_actions_due, ActionScheduler_DBStore->query_actions
+[01-Apr-2026 06:36:34 UTC] PHP Warning:  Undefined property: stdClass::$error in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gs-bookshowcase-pro\includes\license\gs-updater.php on line 285
+[01-Apr-2026 06:36:59 UTC] PHP Warning:  Undefined property: stdClass::$error in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gs-bookshowcase-pro\includes\license\gs-updater.php on line 285
+[01-Apr-2026 06:38:21 UTC] PHP Warning:  Undefined property: stdClass::$error in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gs-bookshowcase-pro\includes\license\gs-updater.php on line 285
+[01-Apr-2026 08:07:08 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:07:51 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:07:58 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:08:08 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:08:36 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:08:40 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:08:43 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:09:07 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:09:45 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:10:13 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: invalid_schedule, Error message: Event schedule does not exist., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[01-Apr-2026 08:10:56 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:11:05 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:11:21 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:15:15 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:15:28 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:15:42 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:15:51 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:16:13 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:16:17 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:16:25 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:16:29 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:16:35 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:16:40 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:16:43 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:16:45 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:16:48 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:17:01 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:18:44 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:18:47 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:41:39 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:41:47 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:41:54 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:42:01 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:42:12 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:42:23 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 08:42:30 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 09:35:30 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:05:25 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:05:35 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:06:10 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:06:23 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:23:24 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:23:35 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:23:41 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:23:51 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:30:51 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:30:57 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:45:54 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[01-Apr-2026 10:46:05 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[02-Apr-2026 01:39:20 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[02-Apr-2026 01:50:21 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[02-Apr-2026 01:50:31 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[02-Apr-2026 01:57:25 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[02-Apr-2026 01:57:38 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[02-Apr-2026 01:57:45 UTC] Array
+(
+    [0] => Array
+        (
+            [label] => The Book Thief
+            [value] => 6533
+        )
+
+    [1] => Array
+        (
+            [label] => Symbiosis
+            [value] => 6532
+        )
+
+    [2] => Array
+        (
+            [label] => Legacy of Hunger
+            [value] => 6531
+        )
+
+    [3] => Array
+        (
+            [label] => Genesis Awakens
+            [value] => 6530
+        )
+
+    [4] => Array
+        (
+            [label] => Curious Minds
+            [value] => 6529
+        )
+
+    [5] => Array
+        (
+            [label] => All He Knew
+            [value] => 6528
+        )
+
+)
+
+[02-Apr-2026 08:42:11 UTC] PHP Parse error:  syntax error, unexpected token "endforeach", expecting "elseif" or "else" or "endif" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gsm-slider\widgets\class-gsm-slider-widget.php on line 3725
+[02-Apr-2026 09:17:30 UTC] PHP Warning:  Undefined array key "pro-free-trial-popup" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\modules\pro-free-trial-popup\module.php on line 118
+[02-Apr-2026 09:17:30 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\modules\pro-free-trial-popup\module.php on line 118
+[02-Apr-2026 09:17:30 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\modules\pro-free-trial-popup\module.php on line 118
+[02-Apr-2026 09:17:36 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting "elseif" or "else" or "endif" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gsm-slider\widgets\class-gsm-slider-widget.php on line 3721
+[02-Apr-2026 09:17:44 UTC] PHP Warning:  Undefined array key "pro-free-trial-popup" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\modules\pro-free-trial-popup\module.php on line 118
+[02-Apr-2026 09:17:44 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\modules\pro-free-trial-popup\module.php on line 118
+[02-Apr-2026 09:17:44 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\modules\pro-free-trial-popup\module.php on line 118
+[02-Apr-2026 09:17:44 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting "elseif" or "else" or "endif" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gsm-slider\widgets\class-gsm-slider-widget.php on line 3721
+[02-Apr-2026 09:21:30 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting "elseif" or "else" or "endif" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gsm-slider\widgets\class-gsm-slider-widget.php on line 3721
+[02-Apr-2026 09:22:33 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting "elseif" or "else" or "endif" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gsm-slider\widgets\class-gsm-slider-widget.php on line 3721
+[02-Apr-2026 09:24:40 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting "elseif" or "else" or "endif" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gsm-slider\widgets\class-gsm-slider-widget.php on line 3721
+[02-Apr-2026 09:30:30 UTC] PHP Parse error:  syntax error, unexpected token "<" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\gsm-slider\widgets\class-gsm-slider-widget.php on line 3722
+[08-Apr-2026 09:31:40 UTC] WordPress database error Table 'local.wp_ea11y_page_scanned' doesn't exist for query SELECT * FROM wp_ea11y_page_scanned  WHERE 1 ORDER BY created_at desc LIMIT 1000 made by wp_dashboard, do_meta_boxes, EA11y\Modules\Dashboard\Widgets\Ally_Dashboard_Widget::ally_widget_render, EA11y\Modules\Scanner\Classes\Utils::get_scanner_stats, EA11y\Modules\Remediation\Database\Page_Entry::get_pages, EA11y\Classes\Database\Table::select
+[09-Apr-2026 03:08:22 UTC] WordPress database error Table 'local.wp_ea11y_page_scanned' doesn't exist for query SELECT * FROM wp_ea11y_page_scanned  WHERE 1 ORDER BY created_at desc LIMIT 1000 made by wp_dashboard, do_meta_boxes, EA11y\Modules\Dashboard\Widgets\Ally_Dashboard_Widget::ally_widget_render, EA11y\Modules\Scanner\Classes\Utils::get_scanner_stats, EA11y\Modules\Remediation\Database\Page_Entry::get_pages, EA11y\Classes\Database\Table::select
+[09-Apr-2026 03:13:50 UTC] WordPress database error Table 'local.wp_ea11y_page_scanned' doesn't exist for query SELECT * FROM wp_ea11y_page_scanned  WHERE 1 ORDER BY created_at desc LIMIT 1000 made by wp_dashboard, do_meta_boxes, EA11y\Modules\Dashboard\Widgets\Ally_Dashboard_Widget::ally_widget_render, EA11y\Modules\Scanner\Classes\Utils::get_scanner_stats, EA11y\Modules\Remediation\Database\Page_Entry::get_pages, EA11y\Classes\Database\Table::select
+[09-Apr-2026 04:45:16 UTC] WordPress database error Table 'local.wp_ea11y_page_scanned' doesn't exist for query SELECT * FROM wp_ea11y_page_scanned  WHERE 1 ORDER BY created_at desc LIMIT 1000 made by wp_dashboard, do_meta_boxes, EA11y\Modules\Dashboard\Widgets\Ally_Dashboard_Widget::ally_widget_render, EA11y\Modules\Scanner\Classes\Utils::get_scanner_stats, EA11y\Modules\Remediation\Database\Page_Entry::get_pages, EA11y\Classes\Database\Table::select
+[12-Apr-2026 03:32:27 UTC] WordPress database error Table 'local.wp_ea11y_page_scanned' doesn't exist for query SELECT * FROM wp_ea11y_page_scanned  WHERE 1 ORDER BY created_at desc LIMIT 1000 made by wp_dashboard, do_meta_boxes, EA11y\Modules\Dashboard\Widgets\Ally_Dashboard_Widget::ally_widget_render, EA11y\Modules\Scanner\Classes\Utils::get_scanner_stats, EA11y\Modules\Remediation\Database\Page_Entry::get_pages, EA11y\Classes\Database\Table::select
+[12-Apr-2026 08:03:53 UTC] WordPress database error Table 'local.wp_ea11y_page_scanned' doesn't exist for query SELECT * FROM wp_ea11y_page_scanned  WHERE 1 ORDER BY created_at desc LIMIT 1000 made by wp_dashboard, do_meta_boxes, EA11y\Modules\Dashboard\Widgets\Ally_Dashboard_Widget::ally_widget_render, EA11y\Modules\Scanner\Classes\Utils::get_scanner_stats, EA11y\Modules\Remediation\Database\Page_Entry::get_pages, EA11y\Classes\Database\Table::select
+[12-Apr-2026 08:29:05 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:29:14 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:29:17 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:29:24 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:29:29 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:29:36 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:29:36 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:29:48 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:29:54 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:29:59 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:30:00 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:30:05 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:30:13 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:30:13 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:30:18 UTC] PHP Warning:  Undefined property: stdClass::$terms in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\fakerpress\src\FakerPress\Provider\WP_Post.php on line 224
+[12-Apr-2026 08:36:11 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:16 UTC] Product Generator created 1 variable product with 22 variations in 5.061953 seconds
+[12-Apr-2026 08:36:16 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:17 UTC] Product Generator created 1 simple product in 1.182173 seconds
+[12-Apr-2026 08:36:17 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:18 UTC] Product Generator created 1 simple product in 1.044059 seconds
+[12-Apr-2026 08:36:18 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:20 UTC] Product Generator created 1 simple product in 1.346180 seconds
+[12-Apr-2026 08:36:20 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:21 UTC] Product Generator created 1 variable product with 1 variations in 1.220149 seconds
+[12-Apr-2026 08:36:21 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:22 UTC] Product Generator created 1 variable product with 2 variations in 1.339086 seconds
+[12-Apr-2026 08:36:22 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:24 UTC] Product Generator created 1 variable product with 1 variations in 1.337759 seconds
+[12-Apr-2026 08:36:24 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:25 UTC] Product Generator created 1 simple product in 1.207972 seconds
+[12-Apr-2026 08:36:25 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:26 UTC] Product Generator created 1 variable product with 1 variations in 1.244395 seconds
+[12-Apr-2026 08:36:26 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:29 UTC] Product Generator created 1 variable product with 12 variations in 3.030130 seconds
+[12-Apr-2026 08:36:29 UTC] Product Generator cycle created 4 simple products, 6 variable products and 39 variations in 18.019336 seconds
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "l" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "l" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "pink" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "pink" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "pink" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "pink" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "l" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "pink" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "l" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "pink" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:30 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "green" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "orange" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "orange" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "orange" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "white" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "orange" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "white" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "l" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "white" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "l" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "white" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "red" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "yellow" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "white" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "yellow" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "orange" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "red" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "orange" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "mint" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xxl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "l" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "blue" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xxl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "red" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xl" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "yellow" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xxs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "brown" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "white" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "yellow" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "s" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "orange" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "red" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "m" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "orange" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "mint" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "l" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "black" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:31 UTC] PHP Warning:  Undefined array key "xs" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\woocommerce\src\Internal\ProductAttributesLookup\LookupDataStore.php on line 531
+[12-Apr-2026 08:36:37 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:38 UTC] Product Generator created 1 simple product in 1.125389 seconds
+[12-Apr-2026 08:36:38 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:44 UTC] Product Generator created 1 variable product with 23 variations in 6.170808 seconds
+[12-Apr-2026 08:36:44 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:45 UTC] Product Generator created 1 simple product in 1.517379 seconds
+[12-Apr-2026 08:36:45 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:47 UTC] Product Generator created 1 variable product with 3 variations in 2.022905 seconds
+[12-Apr-2026 08:36:48 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:50 UTC] Product Generator created 1 variable product with 4 variations in 2.217516 seconds
+[12-Apr-2026 08:36:50 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:51 UTC] Product Generator created 1 variable product with 2 variations in 1.744139 seconds
+[12-Apr-2026 08:36:52 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:53 UTC] Product Generator created 1 simple product in 1.371060 seconds
+[12-Apr-2026 08:36:53 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:54 UTC] Product Generator created 1 variable product with 1 variations in 1.702518 seconds
+[12-Apr-2026 08:36:55 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:56 UTC] Product Generator created 1 simple product in 1.389955 seconds
+[12-Apr-2026 08:36:56 UTC] Product Generator Unsplash missing Access Key
+[12-Apr-2026 08:36:58 UTC] Product Generator created 1 variable product with 4 variations in 1.904300 seconds
+[12-Apr-2026 08:36:58 UTC] Product Generator cycle created 4 simple products, 6 variable products and 37 variations in 21.171521 seconds
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:38 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:39 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:46 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:53 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:15:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:16:12 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:16:12 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:16:12 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:16:12 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:16:14 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:16:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:16:16 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:16:16 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:16:19 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:16:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:22:45 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:24:21 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:27:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:29:51 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:02 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:02 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_badge in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 356
+[12-Apr-2026 09:30:03 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 421
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:19 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 01:59:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:16 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:16 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:30:17 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:12 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:14 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:20 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:26 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:26 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:26 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:26 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:26 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:26 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:26 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:44:26 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:27 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:29 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:29 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:30 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:33 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 02:45:57 UTC] PHP Warning:  Undefined variable $show_cart in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 423
+[13-Apr-2026 04:37:47 UTC] PHP Parse error:  syntax error, unexpected token "public" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 745
+[13-Apr-2026 04:37:50 UTC] PHP Parse error:  syntax error, unexpected token "public" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 745
+[13-Apr-2026 04:37:56 UTC] PHP Parse error:  syntax error, unexpected token "public" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 745
+[13-Apr-2026 04:38:06 UTC] PHP Parse error:  syntax error, unexpected token "public" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 745
+[13-Apr-2026 04:38:17 UTC] PHP Parse error:  syntax error, unexpected token "public" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 745
+[15-Apr-2026 02:23:12 UTC] PHP Parse error:  syntax error, unexpected token "as", expecting "," or ";" in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\amanah-filter\includes\class-amanah-ajax.php on line 1060
+[21-Apr-2026 03:20:49 UTC] WordPress database error Table 'local.wp_ea11y_page_scanned' doesn't exist for query SELECT * FROM wp_ea11y_page_scanned  WHERE 1 ORDER BY created_at desc LIMIT 1000 made by wp_dashboard, do_meta_boxes, EA11y\Modules\Dashboard\Widgets\Ally_Dashboard_Widget::ally_widget_render, EA11y\Modules\Scanner\Classes\Utils::get_scanner_stats, EA11y\Modules\Remediation\Database\Page_Entry::get_pages, EA11y\Classes\Database\Table::select
+[21-Apr-2026 03:24:08 UTC] PHP Fatal error:  Uncaught Exception: Invalid post. in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\settings\page\manager.php:101
+Stack trace:
+#0 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\base\document.php(1811): Elementor\Core\Settings\Page\Manager->ajax_before_save_settings(Array, NULL)
+#1 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\base\document.php(911): Elementor\Core\Base\Document->save_settings(Array)
+#2 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\kits\manager.php(295): Elementor\Core\Base\Document->update_settings(Array)
+#3 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\kits\manager.php(464): Elementor\Core\Kits\Manager->update_kit_settings_based_on_option('site_name', 'Plugin Check')
+#4 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(343): Elementor\Core\Kits\Manager->Elementor\Core\Kits\{closure}('My Site', 'Plugin Check')
+#5 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#7 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\option.php(1020): do_action('update_option_b...', 'My Site', 'Plugin Check', 'blogname')
+#8 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\includes\upgrade.php(82): update_option('blogname', 'Plugin Check')
+#9 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\plugin-check\includes\Checker\Runtime_Environment_Setup.php(289): wp_install('Plugin Check', 'plugincheck', 'demo@pluginchec...', false)
+#10 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\plugin-check\includes\Checker\Runtime_Environment_Setup.php(77): WordPress\Plugin_Check\Checker\Runtime_Environment_Setup->install_wordpress('http://gsttest....', 'twentytwentyfiv...', Array)
+#11 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\plugin-check\includes\Admin\Admin_AJAX.php(184): WordPress\Plugin_Check\Checker\Runtime_Environment_Setup->set_up()
+#12 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(341): WordPress\Plugin_Check\Admin\Admin_AJAX->set_up_environment('')
+#13 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#14 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-includes\plugin.php(522): WP_Hook->do_action(Array)
+#15 C:\Users\Manzur\Local Sites\gsttest\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_plugin_...')
+#16 {main}
+  thrown in C:\Users\Manzur\Local Sites\gsttest\app\public\wp-content\plugins\elementor\core\settings\page\manager.php on line 101
+[21-Apr-2026 03:24:08 UTC] WordPress database error Table 'local.wp_pc_actionscheduler_actions' doesn't exist for query SELECT COUNT(DISTINCT claim_id) FROM wp_pc_actionscheduler_actions WHERE claim_id != 0 AND status IN ( 'pending', 'in-progress') made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->maybe_dispatch_async_request, ActionScheduler_AsyncRequest_QueueRunner->maybe_dispatch, ActionScheduler_AsyncRequest_QueueRunner->allow, ActionScheduler_Abstract_QueueRunner->has_maximum_concurrent_batches, ActionScheduler_DBStore->get_claim_count
+[21-Apr-2026 03:24:08 UTC] WordPress database error Table 'local.wp_pc_actionscheduler_actions' doesn't exist for query SELECT count(a.action_id) FROM wp_pc_actionscheduler_actions a WHERE 1=1 AND a.status IN ('pending') AND a.scheduled_date_gmt <= '2026-04-21 03:24:08' made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->maybe_dispatch_async_request, ActionScheduler_AsyncRequest_QueueRunner->maybe_dispatch, ActionScheduler_AsyncRequest_QueueRunner->allow, ActionScheduler_Store->has_pending_actions_due, ActionScheduler_DBStore->query_actions
+[21-Apr-2026 03:53:02 UTC] WordPress database error Duplicate entry 'team_member' for key 'wp_itsmfp_post_types.slug' for query INSERT INTO `wp_itsmfp_post_types` (`slug`, `label`, `settings`) VALUES ('team_member', 'Team Members', '{\\\"singular\\\":\\\"Team Member\\\",\\\"plural\\\":\\\"Team Members\\\",\\\"public\\\":true,\\\"has_archive\\\":true,\\\"menu_icon\\\":\\\"dashicons-groups\\\",\\\"supports\\\":[\\\"title\\\",\\\"editor\\\",\\\"thumbnail\\\"],\\\"show_in_rest\\\":true,\\\"rewrite_slug\\\":\\\"team\\\"}') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, ITSMFP\REST\RestAPI->import_starter, ITSMFP\Managers\IOManager->import_starter, ITSMFP\Managers\IOManager->import_all
+[21-Apr-2026 03:53:02 UTC] WordPress database error Duplicate entry 'department' for key 'wp_itsmfp_taxonomies.slug' for query INSERT INTO `wp_itsmfp_taxonomies` (`slug`, `label`, `post_types`, `settings`) VALUES ('department', 'Departments', '[\\\"team_member\\\"]', '{\\\"singular\\\":\\\"Department\\\",\\\"plural\\\":\\\"Departments\\\",\\\"hierarchical\\\":true,\\\"public\\\":true,\\\"show_in_rest\\\":true}') made by require('wp-blog-header.php'), wp, WP->main, WP->parse_request, do_action_ref_array('parse_request'), WP_Hook->do_action, WP_Hook->apply_filters, rest_api_loaded, WP_REST_Server->serve_request, WP_REST_Server->dispatch, WP_REST_Server->respond_to_request, ITSMFP\REST\RestAPI->import_starter, ITSMFP\Managers\IOManager->import_starter, ITSMFP\Managers\IOManager->import_all
+[21-Apr-2026 05:25:21 UTC] WordPress database error Table 'local.wp_ea11y_page_scanned' doesn't exist for query SELECT * FROM wp_ea11y_page_scanned  WHERE 1 ORDER BY created_at desc LIMIT 1000 made by wp_dashboard, do_meta_boxes, EA11y\Modules\Dashboard\Widgets\Ally_Dashboard_Widget::ally_widget_render, EA11y\Modules\Scanner\Classes\Utils::get_scanner_stats, EA11y\Modules\Remediation\Database\Page_Entry::get_pages, EA11y\Classes\Database\Table::select
+[27-Apr-2026 06:33:00 UTC] WordPress database error Table 'local.wp_ea11y_page_scanned' doesn't exist for query SELECT * FROM wp_ea11y_page_scanned  WHERE 1 ORDER BY created_at desc LIMIT 1000 made by wp_dashboard, do_meta_boxes, EA11y\Modules\Dashboard\Widgets\Ally_Dashboard_Widget::ally_widget_render, EA11y\Modules\Scanner\Classes\Utils::get_scanner_stats, EA11y\Modules\Remediation\Database\Page_Entry::get_pages, EA11y\Classes\Database\Table::select

@@ -99,6 +99,18 @@ class GSM_Slider_Templates {
 	}
 
 	/**
+	 * Generate a base64 SVG placeholder.
+	 */
+	private function get_svg_placeholder( $text, $bg_color = '#333333', $width = 1920, $height = 1080 ) {
+		$font_size = max( 24, intval( $width / 15 ) );
+		$svg = sprintf(
+			'<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d"><rect width="100%%" height="100%%" fill="%s"/><text x="50%%" y="50%%" font-family="sans-serif" font-size="%d" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">%s</text></svg>',
+			$width, $height, $width, $height, $bg_color, $font_size, esc_html( $text )
+		);
+		return 'data:image/svg+xml;base64,' . base64_encode( $svg );
+	}
+
+	/**
 	 * All built-in templates.
 	 *
 	 * @return array
@@ -110,7 +122,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Hero Dark',
 				'description' => 'Full-screen dark hero with cinematic effect',
 				'category'    => 'hero',
-				'thumbnail'   => 'https://picsum.photos/seed/hero-dark/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Hero Dark', '#873981', 400, 225 ),
 				'settings'    => array(
 					'content_source'        => 'custom',
 					'effect'                => 'fade',
@@ -135,7 +147,7 @@ class GSM_Slider_Templates {
 					'slides_data'           => array(
 						array(
 							'media_type'            => 'image',
-							'bg_image'              => array( 'url' => 'https://picsum.photos/seed/dark1/1920/1080' ),
+							'bg_image'              => array( 'url' => $this->get_svg_placeholder( 'Dark 1', '#4b2df0', 1920, 1080 ) ),
 							'image_fit'             => 'cover',
 							'image_position'        => 'center center',
 							'image_effect'          => 'zoom',
@@ -157,7 +169,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'            => 'image',
-							'bg_image'              => array( 'url' => 'https://picsum.photos/seed/dark2/1920/1080' ),
+							'bg_image'              => array( 'url' => $this->get_svg_placeholder( 'Dark 2', '#4b2df0', 1920, 1080 ) ),
 							'image_fit'             => 'cover',
 							'image_position'        => 'center center',
 							'image_effect'          => 'parallax',
@@ -179,7 +191,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'            => 'image',
-							'bg_image'              => array( 'url' => 'https://picsum.photos/seed/dark3/1920/1080' ),
+							'bg_image'              => array( 'url' => $this->get_svg_placeholder( 'Dark 3', '#4b2df0', 1920, 1080 ) ),
 							'image_fit'             => 'cover',
 							'image_position'        => 'center center',
 							'image_effect'          => 'zoom',
@@ -205,7 +217,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Hero Light',
 				'description' => 'Clean minimal hero with white content box',
 				'category'    => 'hero',
-				'thumbnail'   => 'https://picsum.photos/seed/hero-light/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Hero Light', '#96399f', 400, 225 ),
 				'settings'    => array(
 					'content_source'        => 'custom',
 					'effect'                => 'slide',
@@ -233,7 +245,7 @@ class GSM_Slider_Templates {
 					'slides_data'           => array(
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/light1/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Light 1', '#5a453f', 1920, 1080 ) ),
 							'image_fit'          => 'cover',
 							'image_position'     => 'right center',
 							'image_effect'       => 'none',
@@ -252,7 +264,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/light2/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Light 2', '#5a453f', 1920, 1080 ) ),
 							'image_fit'          => 'cover',
 							'image_position'     => 'left center',
 							'image_effect'       => 'none',
@@ -277,7 +289,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Testimonial',
 				'description' => 'Quote-style with glass morphism content box',
 				'category'    => 'testimonial',
-				'thumbnail'   => 'https://picsum.photos/seed/testimonial/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Testimonial', '#a55d06', 400, 225 ),
 				'settings'    => array(
 					'content_source'       => 'custom',
 					'effect'               => 'fade',
@@ -306,7 +318,7 @@ class GSM_Slider_Templates {
 					'slides_data'          => array(
 						array(
 							'media_type'            => 'image',
-							'bg_image'              => array( 'url' => 'https://picsum.photos/seed/testi1/1920/1080' ),
+							'bg_image'              => array( 'url' => $this->get_svg_placeholder( 'Testi 1', '#5a5d6f', 1920, 1080 ) ),
 							'image_fit'             => 'cover',
 							'image_position'        => 'center center',
 							'image_effect'          => 'zoom',
@@ -328,7 +340,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'            => 'image',
-							'bg_image'              => array( 'url' => 'https://picsum.photos/seed/testi2/1920/1080' ),
+							'bg_image'              => array( 'url' => $this->get_svg_placeholder( 'Testi 2', '#5a5d6f', 1920, 1080 ) ),
 							'image_fit'             => 'cover',
 							'image_position'        => 'center center',
 							'image_effect'          => 'parallax',
@@ -356,7 +368,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Portfolio',
 				'description' => 'Image-focused, minimal overlay, bottom-aligned text',
 				'category'    => 'portfolio',
-				'thumbnail'   => 'https://picsum.photos/seed/portfolio/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Portfolio', '#8751b1', 400, 225 ),
 				'settings'    => array(
 					'content_source'        => 'custom',
 					'effect'                => 'slide',
@@ -383,7 +395,7 @@ class GSM_Slider_Templates {
 					'slides_data'           => array(
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/port1/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Port 1', '#4b5139', 1920, 1080 ) ),
 							'image_fit'          => 'cover',
 							'image_position'     => 'center center',
 							'image_effect'       => 'zoom',
@@ -407,7 +419,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/port2/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Port 2', '#4b5139', 1920, 1080 ) ),
 							'image_fit'          => 'cover',
 							'image_position'     => 'center center',
 							'image_effect'       => 'parallax',
@@ -431,7 +443,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/port3/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Port 3', '#4b5139', 1920, 1080 ) ),
 							'image_fit'          => 'cover',
 							'image_position'     => 'center center',
 							'image_effect'       => 'zoom',
@@ -461,7 +473,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Corporate',
 				'description' => 'Professional, clean, centered content',
 				'category'    => 'corporate',
-				'thumbnail'   => 'https://picsum.photos/seed/corporate/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Corporate', '#872a63', 400, 225 ),
 				'settings'    => array(
 					'content_source'        => 'custom',
 					'effect'                => 'fade',
@@ -488,7 +500,7 @@ class GSM_Slider_Templates {
 					'slides_data'           => array(
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/corp1/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Corp 1', '#4b2aea', 1920, 1080 ) ),
 							'image_fit'          => 'cover',
 							'image_position'     => 'center center',
 							'image_effect'       => 'zoom',
@@ -508,7 +520,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/corp2/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Corp 2', '#4b2aea', 1920, 1080 ) ),
 							'image_fit'          => 'cover',
 							'image_position'     => 'center center',
 							'image_effect'       => 'parallax',
@@ -534,7 +546,7 @@ class GSM_Slider_Templates {
 				'title'       => 'News / Blog',
 				'description' => 'Dynamic posts — pulls latest posts automatically',
 				'category'    => 'dynamic',
-				'thumbnail'   => 'https://picsum.photos/seed/news/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'News', '#3c4b0f', 400, 225 ),
 				'settings'    => array(
 					'content_source'       => 'posts',
 					'query_post_type'      => 'post',
@@ -573,7 +585,7 @@ class GSM_Slider_Templates {
 				'title'       => 'WooCommerce Products',
 				'description' => 'Dynamic product slider with sale badges',
 				'category'    => 'dynamic',
-				'thumbnail'   => 'https://picsum.photos/seed/woo/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Woo', '#2d6627', 400, 225 ),
 				'settings'    => array(
 					'content_source'        => 'products',
 					'woo_products_per_page' => 5,
@@ -609,7 +621,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Split Hero',
 				'description' => 'Half image, half content — unique layout',
 				'category'    => 'hero',
-				'thumbnail'   => 'https://picsum.photos/seed/split/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Split', '#4b5a4b', 400, 225 ),
 				'settings'    => array(
 					'content_source'  => 'custom',
 					'effect'          => 'slide',
@@ -629,7 +641,7 @@ class GSM_Slider_Templates {
 						array(
 							'_id'              => 'splithero1',
 							'media_type'       => 'image',
-							'bg_image'         => array( 'url' => 'https://picsum.photos/seed/split1/1920/1080' ),
+							'bg_image'         => array( 'url' => $this->get_svg_placeholder( 'Split 1', '#5a5a69', 1920, 1080 ) ),
 							'split_screen'     => 'yes',
 							'split_ratio'      => '55-45',
 							'split_reverse'    => '',
@@ -650,7 +662,7 @@ class GSM_Slider_Templates {
 						array(
 							'_id'              => 'splithero2',
 							'media_type'       => 'image',
-							'bg_image'         => array( 'url' => 'https://picsum.photos/seed/split2/1920/1080' ),
+							'bg_image'         => array( 'url' => $this->get_svg_placeholder( 'Split 2', '#5a5a69', 1920, 1080 ) ),
 							'split_screen'     => 'yes',
 							'split_ratio'      => '55-45',
 							'split_reverse'    => 'yes',
@@ -676,7 +688,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Typing Hero',
 				'description' => 'Auto-typing heading with cinematic background',
 				'category'    => 'hero',
-				'thumbnail'   => 'https://picsum.photos/seed/typing/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Typing', '#5a5d6f', 400, 225 ),
 				'settings'    => array(
 					'content_source'       => 'custom',
 					'effect'               => 'fade',
@@ -709,7 +721,7 @@ class GSM_Slider_Templates {
 						array(
 							'_id'                        => 'typinghero1',
 							'media_type'                 => 'image',
-							'bg_image'                   => array( 'url' => 'https://picsum.photos/seed/type1/1920/1080' ),
+							'bg_image'                   => array( 'url' => $this->get_svg_placeholder( 'Type 1', '#4b5d51', 1920, 1080 ) ),
 							'image_fit'                  => 'cover',
 							'image_position'             => 'center center',
 							'image_effect'               => 'zoom',
@@ -742,7 +754,7 @@ class GSM_Slider_Templates {
 						array(
 							'_id'                        => 'typinghero2',
 							'media_type'                 => 'image',
-							'bg_image'                   => array( 'url' => 'https://picsum.photos/seed/type2/1920/1080' ),
+							'bg_image'                   => array( 'url' => $this->get_svg_placeholder( 'Type 2', '#4b5d51', 1920, 1080 ) ),
 							'image_fit'                  => 'cover',
 							'image_position'             => 'center center',
 							'image_effect'               => 'zoom',
@@ -780,7 +792,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Glitter Hero',
 				'description' => 'Gold glitter particles — luxury feel',
 				'category'    => 'hero',
-				'thumbnail'   => 'https://picsum.photos/seed/glitter/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Glitter', '#69363f', 400, 225 ),
 				'settings'    => array(
 					'content_source'        => 'custom',
 					'effect'                => 'fade',
@@ -806,7 +818,7 @@ class GSM_Slider_Templates {
 					'slides_data'          => array(
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/glitter1/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Glitter 1', '#78365d', 1920, 1080 ) ),
 							'image_effect'       => 'zoom',
 							'overlay_type'       => 'solid',
 							'overlay_color'      => 'rgba(10,5,30,0.75)',
@@ -831,7 +843,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/glitter2/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Glitter 2', '#78365d', 1920, 1080 ) ),
 							'image_effect'       => 'parallax',
 							'overlay_type'       => 'gradient',
 							'overlay_gradient_start'     => 'rgba(20,5,40,0.8)',
@@ -864,7 +876,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Snow Hero',
 				'description' => 'Falling snow particles — elegant winter feel',
 				'category'    => 'hero',
-				'thumbnail'   => 'https://picsum.photos/seed/snow/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Snow', '#3c5a2d', 400, 225 ),
 				'settings'    => array(
 					'content_source'        => 'custom',
 					'effect'                => 'fade',
@@ -890,7 +902,7 @@ class GSM_Slider_Templates {
 					'slides_data'          => array(
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/snow1/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Snow 1', '#4b5a4b', 1920, 1080 ) ),
 							'image_effect'       => 'zoom',
 							'overlay_type'       => 'solid',
 							'overlay_color'      => 'rgba(0,20,50,0.6)',
@@ -921,7 +933,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Countdown Offer',
 				'description' => 'Limited time offer with live countdown',
 				'category'    => 'hero',
-				'thumbnail'   => 'https://picsum.photos/seed/countdown/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Countdown', '#872a63', 400, 225 ),
 				'settings'    => array(
 					'content_source'        => 'custom',
 					'effect'                => 'fade',
@@ -945,7 +957,7 @@ class GSM_Slider_Templates {
 					'slides_data'          => array(
 						array(
 							'media_type'          => 'image',
-							'bg_image'            => array( 'url' => 'https://picsum.photos/seed/offer1/1920/1080' ),
+							'bg_image'            => array( 'url' => $this->get_svg_placeholder( 'Offer 1', '#5a4e51', 1920, 1080 ) ),
 							'image_effect'        => 'zoom',
 							'overlay_type'        => 'gradient',
 							'overlay_gradient_start' => 'rgba(0,0,0,0.8)',
@@ -987,7 +999,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Book Showcase',
 				'description' => 'Left content + right 2x2 book grid with animations',
 				'category'    => 'portfolio',
-				'thumbnail'   => 'https://picsum.photos/seed/books/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Books', '#4b27e4', 400, 225 ),
 				'settings'    => array(
 					'content_source'    => 'custom',
 					'effect'            => 'fade',
@@ -1011,7 +1023,7 @@ class GSM_Slider_Templates {
 					'slides_data'       => array(
 						array(
 							'media_type'         => 'image',
-							'bg_image'           => array( 'url' => 'https://picsum.photos/seed/bookbg1/1920/1080' ),
+							'bg_image'           => array( 'url' => $this->get_svg_placeholder( 'Bookbg 1', '#692721', 1920, 1080 ) ),
 							'image_fit'          => 'cover',
 							'image_position'     => 'center center',
 							'image_effect'       => 'none',
@@ -1028,19 +1040,19 @@ class GSM_Slider_Templates {
 							'book_btn2_text'       => 'সকল বই দেখুন',
 							'book_btn2_url'        => array( 'url' => '#' ),
 
-							'book1_image' => array( 'url' => 'https://picsum.photos/seed/book1/300/400' ),
+							'book1_image' => array( 'url' => $this->get_svg_placeholder( 'Book 1', '#4b27e4', 300, 400 ) ),
 							'book1_title' => 'অদৃশ্য সাম্রাজ্য',
 							'book1_url'   => array( 'url' => '#' ),
 
-							'book2_image' => array( 'url' => 'https://picsum.photos/seed/book2/300/400' ),
+							'book2_image' => array( 'url' => $this->get_svg_placeholder( 'Book 2', '#4b27e4', 300, 400 ) ),
 							'book2_title' => 'ইসলাম ও মুসলমানের পরিচয়',
 							'book2_url'   => array( 'url' => '#' ),
 
-							'book3_image' => array( 'url' => 'https://picsum.photos/seed/book3/300/400' ),
+							'book3_image' => array( 'url' => $this->get_svg_placeholder( 'Book 3', '#4b27e4', 300, 400 ) ),
 							'book3_title' => 'অভিশপ্ত রংধনু',
 							'book3_url'   => array( 'url' => '#' ),
 
-							'book4_image' => array( 'url' => 'https://picsum.photos/seed/book4/300/400' ),
+							'book4_image' => array( 'url' => $this->get_svg_placeholder( 'Book 4', '#4b27e4', 300, 400 ) ),
 							'book4_title' => 'ইতিহাসের আয়নায় ইহুদি-খ্রিষ্টান',
 							'book4_url'   => array( 'url' => '#' ),
 
@@ -1069,7 +1081,7 @@ class GSM_Slider_Templates {
 				'title'       => 'Fullscreen Scroll',
 				'description' => 'Scroll to navigate — immersive fullscreen experience',
 				'category'    => 'hero',
-				'thumbnail'   => 'https://picsum.photos/seed/scroll/400/225',
+				'thumbnail'   => $this->get_svg_placeholder( 'Scroll', '#5a5a69', 400, 225 ),
 				'settings'    => array(
 					'content_source'            => 'custom',
 					'effect'                    => 'slide',
@@ -1100,7 +1112,7 @@ class GSM_Slider_Templates {
 					'slides_data'               => array(
 						array(
 							'media_type'                 => 'image',
-							'bg_image'                   => array( 'url' => 'https://picsum.photos/seed/scroll1/1920/1080' ),
+							'bg_image'                   => array( 'url' => $this->get_svg_placeholder( 'Scroll 1', '#695a87', 1920, 1080 ) ),
 							'image_effect'               => 'zoom',
 							'overlay_type'               => 'gradient',
 							'overlay_gradient_start'     => 'rgba(0,0,0,0.6)',
@@ -1125,7 +1137,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'                 => 'image',
-							'bg_image'                   => array( 'url' => 'https://picsum.photos/seed/scroll2/1920/1080' ),
+							'bg_image'                   => array( 'url' => $this->get_svg_placeholder( 'Scroll 2', '#695a87', 1920, 1080 ) ),
 							'image_effect'               => 'parallax',
 							'overlay_type'               => 'gradient',
 							'overlay_gradient_start'     => 'rgba(0,0,0,0.65)',
@@ -1150,7 +1162,7 @@ class GSM_Slider_Templates {
 						),
 						array(
 							'media_type'                 => 'image',
-							'bg_image'                   => array( 'url' => 'https://picsum.photos/seed/scroll3/1920/1080' ),
+							'bg_image'                   => array( 'url' => $this->get_svg_placeholder( 'Scroll 3', '#695a87', 1920, 1080 ) ),
 							'image_effect'               => 'zoom',
 							'overlay_type'               => 'gradient',
 							'overlay_gradient_start'     => 'rgba(0,0,0,0.7)',

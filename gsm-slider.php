@@ -34,18 +34,12 @@ require_once GSM_SLIDER_PATH . 'admin/class-gsm-manager.php';
 add_action(
 	'elementor/editor/before_enqueue_scripts',
 	function () {
-		if ( ! wp_script_is( 'gsm-slider', 'registered' ) ) {
-			wp_register_script(
-				'gsm-slider',
-				GSM_SLIDER_URL . 'assets/js/slider.js',
-				array(),
-				GSM_SLIDER_VERSION,
-				true
-			);
-		}
-		wp_localize_script(
-			'gsm-slider',
-			'gsmTemplates',
+		// Localize gsmTemplates onto gsm-slider-editor (the script that actually loads
+		// in the editor panel). gsm-editor.js reads window.gsmTemplates for the modal.
+		// Priority 20 runs BEFORE enqueue_editor_panel_assets (priority 30) which
+		// registers + enqueues gsm-slider-editor, so we use wp_add_inline_script instead
+		// to be safe regardless of registration order.
+		$templates_data = wp_json_encode(
 			array(
 				'nonce'   => wp_create_nonce( 'gsm_templates_nonce' ),
 				'ajaxUrl' => admin_url( 'admin-ajax.php' ),
@@ -64,8 +58,16 @@ add_action(
 				),
 			)
 		);
+		// Inject as a global variable directly — works regardless of which handle is enqueued.
+		wp_add_inline_script(
+			'elementor-editor',
+			'window.gsmTemplates = ' . $templates_data . ';',
+			'before'
+		);
 	},
 	20
 );
 
 GSM_Slider_Plugin::get_instance();
+GSM_Slider_Templates::get_instance();
+GSM_Slider_Manager::get_instance();

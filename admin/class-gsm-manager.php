@@ -134,7 +134,13 @@ class GSM_Slider_Manager {
 				'post_type'      => 'any',
 				'posts_per_page' => -1,
 				'post_status'    => array( 'publish', 'draft', 'private', 'pending' ),
-				'meta_key'       => '_elementor_data',
+				'meta_query'     => array(
+					array(
+						'key'     => '_elementor_data',
+						'value'   => 'gsm_slider',
+						'compare' => 'LIKE',
+					),
+				),
 				'no_found_rows'  => true,
 			)
 		);

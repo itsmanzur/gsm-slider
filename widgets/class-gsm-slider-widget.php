@@ -1988,6 +1988,61 @@ class GSM_Slider_Widget extends Widget_Base {
 		);
 
 		$this->add_control(
+			'progress_bar_position',
+			array(
+				'label'     => esc_html__( 'Position', 'gsm-slider' ),
+				'type'      => Controls_Manager::SELECT,
+				'default'   => 'bottom',
+				'options'   => array(
+					'bottom' => esc_html__( 'Bottom', 'gsm-slider' ),
+					'top'    => esc_html__( 'Top', 'gsm-slider' ),
+				),
+				'condition' => array( 'autoplay' => 'yes', 'autoplay_progress' => 'yes' ),
+			)
+		);
+
+		$this->add_control(
+			'progress_bar_height',
+			array(
+				'label'      => esc_html__( 'Bar Height', 'gsm-slider' ),
+				'type'       => Controls_Manager::SLIDER,
+				'size_units' => array( 'px' ),
+				'range'      => array( 'px' => array( 'min' => 2, 'max' => 12 ) ),
+				'default'    => array( 'size' => 4, 'unit' => 'px' ),
+				'condition'  => array( 'autoplay' => 'yes', 'autoplay_progress' => 'yes' ),
+				'selectors'  => array(
+					'{{WRAPPER}} .gsm-autoplay-progress' => 'height: {{SIZE}}{{UNIT}};',
+				),
+			)
+		);
+
+		$this->add_control(
+			'progress_bar_color',
+			array(
+				'label'     => esc_html__( 'Bar Color', 'gsm-slider' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#ffffff',
+				'condition' => array( 'autoplay' => 'yes', 'autoplay_progress' => 'yes' ),
+				'selectors' => array(
+					'{{WRAPPER}} .gsm-progress-bar' => 'background: {{VALUE}};',
+				),
+			)
+		);
+
+		$this->add_control(
+			'progress_bar_track_color',
+			array(
+				'label'     => esc_html__( 'Track Color', 'gsm-slider' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => 'rgba(255,255,255,0.2)',
+				'condition' => array( 'autoplay' => 'yes', 'autoplay_progress' => 'yes' ),
+				'selectors' => array(
+					'{{WRAPPER}} .gsm-autoplay-progress' => 'background: {{VALUE}};',
+				),
+			)
+		);
+
+		$this->add_control(
 			'autoplay_viewport',
 			array(
 				'label'        => esc_html__( 'Pause When Off-Screen', 'gsm-slider' ),
@@ -4801,8 +4856,10 @@ class GSM_Slider_Widget extends Widget_Base {
 				<?php endif; ?>
 
 				<!-- Autoplay Progress Bar -->
-				<?php if ( 'yes' === ( $settings['autoplay_progress'] ?? '' ) && 'yes' === $settings['autoplay'] ) : ?>
-					<div class="gsm-autoplay-progress">
+				<?php if ( 'yes' === ( $settings['autoplay_progress'] ?? '' ) && 'yes' === $settings['autoplay'] ) :
+					$progress_pos_class = ( 'top' === ( $settings['progress_bar_position'] ?? 'bottom' ) ) ? ' gsm-autoplay-progress--top' : '';
+				?>
+					<div class="gsm-autoplay-progress<?php echo esc_attr( $progress_pos_class ); ?>">
 						<div class="gsm-progress-bar"></div>
 					</div>
 				<?php endif; ?>

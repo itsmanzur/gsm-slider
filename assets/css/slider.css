@@ -1106,18 +1106,39 @@ body.gsm-lightbox-open {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 4px; /* Default height, could be dynamic in pro version */
+	height: 4px;
 	background: rgba(255, 255, 255, 0.2);
-	z-index: 20; /* High enough to be over slides and under pagination if needed */
+	z-index: 20;
 	pointer-events: none;
+	overflow: hidden;
+}
+
+/* Top position variant */
+.gsm-autoplay-progress--top {
+	bottom: auto;
+	top: 0;
 }
 
 .gsm-progress-bar {
 	height: 100%;
-	width: 0%; /* JS will update this */
+	width: 0%;
 	background: #ffffff;
-	transition: width 0.1s linear; /* Smooth visual update between JS frames */
+	border-radius: 0 2px 2px 0;
+	will-change: width;
 }
+
+/* Pause-on-hover support: when autoplay is paused, freeze the bar */
+.gsm-slider-wrapper:hover .gsm-progress-bar {
+	animation-play-state: paused;
+}
+
+/* Reduced-motion: hide entirely */
+@media (prefers-reduced-motion: reduce) {
+	.gsm-autoplay-progress {
+		display: none;
+	}
+}
+
 
 /* =========================================================
    24. Editor Templates Modal

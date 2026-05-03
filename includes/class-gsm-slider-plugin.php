@@ -55,6 +55,9 @@ class GSM_Slider_Plugin {
 	 */
 	private function init_hooks() {
 		add_action( 'plugins_loaded', array( $this, 'check_elementor' ) );
+		// Register scripts/styles early (before Elementor needs them).
+		add_action( 'init', array( $this, 'register_assets' ) );
+		add_action( 'init', array( $this, 'register_styles' ) );
 	}
 
 	/**
@@ -73,14 +76,10 @@ class GSM_Slider_Plugin {
 
 		add_action( 'elementor/widgets/register', array( $this, 'register_widgets' ) );
 
-		// Register scripts and styles early so Elementor can use get_script_depends() properly on both frontend and editor.
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_assets' ), 5 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ), 5 );
-		add_action( 'elementor/editor/before_enqueue_scripts', array( $this, 'register_assets' ) );
-		add_action( 'elementor/editor/before_enqueue_scripts', array( $this, 'register_styles' ) );
 		/*
-		 * Load slider.js in the editor frame (left panel + chrome), not only in the preview iframe.
-		 * Template picker JS needs window.elementor + gsmTemplates in the same document as the button.
+		 * Load a lightweight editor-only script (gsm-editor.js) in the Elementor editor panel.
+		 * slider.js + Swiper are registered globally (via 'init') so get_script_depends()
+		 * can resolve them for the preview iframe without duplicating registration here.
 		 */
 		add_action( 'elementor/editor/before_enqueue_scripts', array( $this, 'enqueue_editor_panel_assets' ), 30 );
 	}
@@ -91,10 +90,19 @@ class GSM_Slider_Plugin {
 	 * only on pages where the widget is used.
 	 */
 	public function register_assets() {
+		// Register Swiper from local vendor (no external CDN dependency).
+		wp_register_script(
+			'swiper',
+			GSM_SLIDER_URL . 'assets/vendor/swiper/swiper-bundle.min.js',
+			array(),
+			'11.2.6',
+			true
+		);
+
 		wp_register_script(
 			'gsm-slider',
 			GSM_SLIDER_URL . 'assets/js/slider.js',
-			array(),
+			array( 'swiper' ),
 			GSM_SLIDER_VERSION,
 			true
 		);
@@ -106,70 +114,43 @@ class GSM_Slider_Plugin {
 	 * only on pages where the widget is used.
 	 */
 	public function register_styles() {
+		// Register Swiper CSS from local vendor.
+		wp_register_style(
+			'swiper',
+			GSM_SLIDER_URL . 'assets/vendor/swiper/swiper-bundle.min.css',
+			array(),
+			'11.2.6'
+		);
+
 		wp_register_style(
 			'gsm-slider',
 			GSM_SLIDER_URL . 'assets/css/slider.css',
-			array(),
+			array( 'swiper' ),
 			GSM_SLIDER_VERSION
 		);
 	}
 
 	/**
-	 * Ensure GSM Slider assets load in the Elementor editor document (panel) so template modal + localization run there.
+	 * Register and enqueue a lightweight editor-only script for the Elementor panel.
+	 * We intentionally do NOT load the full slider.js here — it contains frontend
+	 * Swiper initialization that requires real slider DOM elements and crashes the editor.
 	 */
 	public function enqueue_editor_panel_assets() {
-		global $wp_scripts;
+		// Register the small editor-only script (template modal + manager panel).
+		wp_register_script(
+			'gsm-slider-editor',
+			GSM_SLIDER_URL . 'assets/js/gsm-editor.js',
+			array( 'elementor-editor' ),
+			GSM_SLIDER_VERSION,
+			true
+		);
 
-		if ( isset( $wp_scripts->registered['gsm-slider'] ) ) {
-			$deps = &$wp_scripts->registered['gsm-slider']->deps;
-			if ( ! in_array( 'elementor-editor', $deps, true ) ) {
-				$deps[] = 'elementor-editor';
-			}
-			/*
-			 * Template live preview runs in the editor chrome (same document as the panel).
-			 * Swiper is only guaranteed on the preview iframe — without it, slides stay hidden (fade CSS) → black box.
-			 */
-			$swiper_handle = null;
-			foreach ( array( 'swiper', 'elementor-swiper', 'e-swiper' ) as $h ) {
-				if ( wp_script_is( $h, 'registered' ) ) {
-					$swiper_handle = $h;
-					break;
-				}
-			}
-			if ( $swiper_handle ) {
-				wp_enqueue_script( $swiper_handle );
-				if ( ! in_array( $swiper_handle, $deps, true ) ) {
-					$deps[] = $swiper_handle;
-				}
-			} elseif ( ! wp_script_is( 'gsm-swiper-editor', 'registered' ) ) {
-				wp_register_script(
-					'gsm-swiper-editor',
-					GSM_SLIDER_URL . 'assets/vendor/swiper/swiper-bundle.min.js',
-					array(),
-					'8.4.7',
-					true
-				);
-				wp_register_style(
-					'gsm-swiper-editor',
-					GSM_SLIDER_URL . 'assets/vendor/swiper/swiper-bundle.min.css',
-					array(),
-					'8.4.7'
-				);
-			}
-			if ( ! $swiper_handle && wp_script_is( 'gsm-swiper-editor', 'registered' ) ) {
-				wp_enqueue_style( 'gsm-swiper-editor' );
-				wp_enqueue_script( 'gsm-swiper-editor' );
-				if ( ! in_array( 'gsm-swiper-editor', $deps, true ) ) {
-					$deps[] = 'gsm-swiper-editor';
-				}
-			}
-		}
-
-		wp_enqueue_script( 'gsm-slider' );
+		wp_enqueue_script( 'gsm-slider-editor' );
 		wp_enqueue_style( 'gsm-slider' );
 
+		// Pass both gsmTemplates (from gsm-slider.php hook) data AND gsmManager data to the editor script.
 		wp_localize_script(
-			'gsm-slider',
+			'gsm-slider-editor',
 			'gsmManager',
 			array(
 				'nonce'   => wp_create_nonce( 'gsm_manager_nonce' ),
